@@ -42,6 +42,7 @@ flake8 = "^3.9.2"
 flake8-docstrings = "^1.6.0"
 coverage = "^5.5"
 tbump = "6.3.1"
+boto3 = "^1.18.0"
 
 [tool.poetry.extras]
 aws = ["boto3"]
