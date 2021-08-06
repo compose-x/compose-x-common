@@ -57,7 +57,9 @@ test-all: ## run tests on every Python version with tox
 	tox
 
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source src/compose_x_common -m pytest
+	cd src
+	coverage run --source compose_x_common -m pytest
+	cd -
 	coverage report -m
 	coverage html
 	$(BROWSER) htmlcov/index.html
@@ -89,6 +91,6 @@ install: clean ## install the package to the active Python's site-packages
 	python setup.py install
 
 conform	: ## Conform to a standard of coding syntax
-	isort --profile black compose_x_common
-	black compose_x_common tests setup.py
-	find compose_x_common -name "*.json" -type f  -exec sed -i '1s/^\xEF\xBB\xBF//' {} +
+	isort --profile black src
+	black src tests setup.py
+	find src -name "*.json" -type f  -exec sed -i '1s/^\xEF\xBB\xBF//' {} +

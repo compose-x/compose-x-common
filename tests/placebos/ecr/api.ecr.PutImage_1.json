@@ -1,0 +1,26 @@
+{
+    "status_code": 200,
+    "data": {
+        "image": {
+            "registryId": "000000000000",
+            "repositoryName": "python",
+            "imageId": {
+                "imageDigest": "sha256:c71fa0d5097393770e15338d50d2e78b87067bc21b82dd346c955436ee424e11",
+                "imageTag": "3.7"
+            },
+            "imageManifest": "{\n   \"schemaVersion\": 2,\n   \"mediaType\": \"application/vnd.docker.distribution.manifest.v2+json\",\n   \"config\": {\n      \"mediaType\": \"application/vnd.docker.container.image.v1+json\",\n      \"size\": 2389,\n      \"digest\": \"sha256:5ce00cf7328b46563e9a44b5a5ae28cf912c476be8c8f534ec8d9565dbd6c8b3\"\n   },\n   \"layers\": [\n      {\n         \"mediaType\": \"application/vnd.docker.image.rootfs.diff.tar.gzip\",\n         \"size\": 61684682,\n         \"digest\": \"sha256:3d24604292f287c31563b1f563e83307e0000000000009401fb07c1c3e6e164c\"\n      },\n      {\n         \"mediaType\": \"application/vnd.docker.image.rootfs.diff.tar.gzip\",\n         \"size\": 50479488,\n         \"digest\": \"sha256:f0b8f9aacc460a9c740e710290d2dc8a93a47722ee08935bb3b3b8ccbe9b8814\"\n      }\n   ]\n}",
+            "imageManifestMediaType": "application/vnd.docker.distribution.manifest.v2+json"
+        },
+        "ResponseMetadata": {
+            "RequestId": "dceeaf97-e34c-48dd-8416-2ce7f9af960b",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "dceeaf97-e34c-48dd-8416-2ce7f9af960b",
+                "date": "Fri, 06 Aug 2021 07:44:47 GMT",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "1082"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

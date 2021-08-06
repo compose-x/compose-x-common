@@ -1,0 +1,26 @@
+{
+    "status_code": 200,
+    "data": {
+        "images": [],
+        "failures": [
+            {
+                "imageId": {
+                    "imageTag": "expectedtag"
+                },
+                "failureCode": "ImageNotFound",
+                "failureReason": "Requested image not found"
+            }
+        ],
+        "ResponseMetadata": {
+            "RequestId": "982da00c-4acc-49aa-878d-afd6db6fa672",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "982da00c-4acc-49aa-878d-afd6db6fa672",
+                "date": "Fri, 06 Aug 2021 07:44:48 GMT",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "139"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

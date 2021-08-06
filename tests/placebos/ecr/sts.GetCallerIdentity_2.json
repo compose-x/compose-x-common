@@ -1,0 +1,19 @@
+{
+    "status_code": 200,
+    "data": {
+        "UserId": "AROAVOAWVJQOHZONEREDACTED123:john@ews.net",
+        "Account": "000000000000",
+        "Arn": "arn:aws:sts::000000000000:assumed-role/e9ddee7954f3b1a9/john@ews.net",
+        "ResponseMetadata": {
+            "RequestId": "e4e8b7b6-af38-4357-8ce9-b3411eb4603b",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "e4e8b7b6-af38-4357-8ce9-b3411eb4603b",
+                "content-type": "text/xml",
+                "content-length": "494",
+                "date": "Fri, 06 Aug 2021 07:44:47 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

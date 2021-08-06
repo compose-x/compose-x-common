@@ -13,3 +13,11 @@ repos:
     hooks:
       - id: isort
         args: ["--profile", "black", "--filter-files"]
+  - repo: local
+    hooks:
+      - id: arn-reset
+        name: replacing arn from test files
+        language: script
+        entry: .scripts/cleanup_placebo.sh
+        require_serial: true
+        files: ".json$"

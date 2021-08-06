@@ -1,0 +1,23 @@
+{
+    "status_code": 200,
+    "data": {
+        "imageIds": [
+            {
+                "imageDigest": "sha256:c71fa0d5097393770e15338d50d2e78b87067bc21b82dd346c955436ee424e11",
+                "imageTag": "expectedtag"
+            }
+        ],
+        "failures": [],
+        "ResponseMetadata": {
+            "RequestId": "bf8f7db8-a7aa-4168-84a5-1f5cb0d091c0",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "bf8f7db8-a7aa-4168-84a5-1f5cb0d091c0",
+                "date": "Fri, 06 Aug 2021 07:44:47 GMT",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "143"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}
