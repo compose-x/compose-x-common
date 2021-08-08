@@ -63,13 +63,10 @@ message_template = "Bump to {new_version}"
 tag_template = "v{new_version}"
 
 [[tool.tbump.file]]
-src = "setup.py"
+src = "pyproject.toml"
 
 [[tool.tbump.file]]
-src = "setup.cfg"
-
-[[tool.tbump.file]]
-src = "compose_x_common/__init__.py"
+src = "src/compose_x_common/__init__.py"
 
 [[tool.tbump.before_commit]]
 name = "Files format"
