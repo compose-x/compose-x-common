@@ -2,10 +2,16 @@
 # SPDX-License-Identifier: MPL-2.0
 # Copyright 2020-2021 John Mille <john@compose-x.io>
 
+import re
 
 from boto3.session import Session
 
 from compose_x_common.compose_x_common import keyisset
+
+PRIVATE_ECR_URI_RE = re.compile(
+    r"(?P<account_id>\d{12}).dkr.ecr.(?P<region>[a-z0-9-]+).amazonaws.com/"
+    r"(?P<repo_name>[a-zA-Z0-9-_./]+)(?P<tag>(?:\@sha[\d]+:[a-z-Z0-9]+$)|(?::[\S]+$))"
+)
 
 
 def get_docker_image_details(
