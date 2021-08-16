@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "compose_x_common"
-version = "0.0.2"
+version = "0.1.0"
 description = "Common Library for Compose-X Projects"
 authors = ["John Preston <john@compose-x.io>"]
 maintainers = ["John Preston <john@compose-x.io>"]
@@ -48,7 +48,7 @@ boto3 = "^1.18.0"
 github_url = "https://github.com/compose-x/compose-x-common-libs/"
 
 [tool.tbump.version]
-current = "0.0.2"
+current = "0.1.0"
 
 regex = '''
   (?P<major>\d+)
