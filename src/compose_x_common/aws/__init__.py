@@ -8,7 +8,10 @@ AWS Useful functions
 
 import re
 
-from boto3.session import Session
+try:
+    from boto3.session import Session
+except ImportError:
+    raise Exception("Please run $pip install compose-x-common[aws] to use aws package")
 
 
 def validate_iam_role_arn(arn):

@@ -4,8 +4,10 @@
 
 import re
 
-from boto3.session import Session
-
+try:
+    from boto3.session import Session
+except ImportError:
+    raise Exception("Please run $pip install compose-x-common[aws] to use aws package")
 from compose_x_common.compose_x_common import keyisset
 
 PRIVATE_ECR_URI_RE = re.compile(
