@@ -13,7 +13,7 @@ KMS_KEY_ARN_RE = re.compile(
     r"(?:^arn:aws(?:-[a-z]+)?:kms:[\S]+:\d{12}:key/)(?P<key_id>[a-zA-Z0-9]{8}(?:-[a-zA-Z0-9]{4}){3}-[a-zA-Z0-9]{12})$"
 )
 KMS_ALIAS_ARN_RE = re.compile(
-    r"(?:^arn:aws(?:-[a-z]+)?:kms:[\S]+:[0-9]+:)((alias/)(?P<key_alias>[\S]+))$"
+    r"(?:^arn:aws(?:-[a-z]+)?:kms:[\S]+:[0-9]+:)(?P<key_alias>alias/(?:[\S]+))$"
 )
 
 
@@ -28,7 +28,6 @@ def list_all_keys(keys=None, next_token=None, kms_session=None):
     """
     if kms_session is None:
         kms_session = Session()
-    print(hex(id(kms_session)))
     if keys is None:
         keys = []
     client = kms_session.client("kms")
@@ -86,7 +85,6 @@ def get_key_from_alias(alias, keys=None, alias_failback=False, kms_session=None)
         alias = f"alias/{alias}"
     if kms_session is None:
         kms_session = Session()
-    print(hex(id(kms_session)))
     aliases = list_all_aliases(kms_session=kms_session)
     if not keys:
         keys = list_all_keys(kms_session=kms_session)

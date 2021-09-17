@@ -1,0 +1,86 @@
+{
+    "status_code": 200,
+    "data": {
+        "Keys": [
+            {
+                "KeyId": "05c33ead-8b71-408b-9f08-759d9708545f",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/05c33ead-8b71-408b-9f08-759d9708545f"
+            },
+            {
+                "KeyId": "0b2fc417-8a80-4ff5-95ee-894f11cc464e",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/0b2fc417-8a80-4ff5-95ee-894f11cc464e"
+            },
+            {
+                "KeyId": "221a7cf9-0bd6-45e3-98f2-007d80df6d08",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/221a7cf9-0bd6-45e3-98f2-007d80df6d08"
+            },
+            {
+                "KeyId": "2259cf4d-bb29-4532-9e79-f7f0edad3a84",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/2259cf4d-bb29-4532-9e79-f7f0edad3a84"
+            },
+            {
+                "KeyId": "4f03bbc3-62d2-4560-b8e8-421c161845e4",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/4f03bbc3-62d2-4560-b8e8-421c161845e4"
+            },
+            {
+                "KeyId": "55431c45-325f-4d5e-828c-58d027a8f26f",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/55431c45-325f-4d5e-828c-58d027a8f26f"
+            },
+            {
+                "KeyId": "823f910a-051b-4e42-af04-3e69d68be2d7",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/823f910a-051b-4e42-af04-3e69d68be2d7"
+            },
+            {
+                "KeyId": "8b21bd46-458a-4f03-937b-8958f012d7e0",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/8b21bd46-458a-4f03-937b-8958f012d7e0"
+            },
+            {
+                "KeyId": "8cc19b08-adb4-44d7-8cab-4f2a6d559d64",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/8cc19b08-adb4-44d7-8cab-4f2a6d559d64"
+            },
+            {
+                "KeyId": "96b68744-f438-4b88-83f8-d1cfb211bc4a",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/96b68744-f438-4b88-83f8-d1cfb211bc4a"
+            },
+            {
+                "KeyId": "9c9acb95-35b5-4888-9154-43425f2cfcd5",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/9c9acb95-35b5-4888-9154-43425f2cfcd5"
+            },
+            {
+                "KeyId": "a1e18da6-a254-498e-af1d-5a9d74de363c",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/a1e18da6-a254-498e-af1d-5a9d74de363c"
+            },
+            {
+                "KeyId": "aad6a662-0d62-4a03-b92e-b807f4f18dbd",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/aad6a662-0d62-4a03-b92e-b807f4f18dbd"
+            },
+            {
+                "KeyId": "c1620e79-bf8f-4afb-964e-c19481c96b4b",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/c1620e79-bf8f-4afb-964e-c19481c96b4b"
+            },
+            {
+                "KeyId": "c3332985-f60b-47c1-9670-008f19bcabe0",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/c3332985-f60b-47c1-9670-008f19bcabe0"
+            },
+            {
+                "KeyId": "d019ebaf-278c-47fb-8bf6-79ee8ffa87a9",
+                "KeyArn": "arn:aws:kms:eu-west-1:000000000000:key/d019ebaf-278c-47fb-8bf6-79ee8ffa87a9"
+            }
+        ],
+        "Truncated": false,
+        "ResponseMetadata": {
+            "RequestId": "f89e3ef5-b592-4e94-bf98-a77eb953302d",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "f89e3ef5-b592-4e94-bf98-a77eb953302d",
+                "cache-control": "no-cache, no-store, must-revalidate, private",
+                "expires": "0",
+                "pragma": "no-cache",
+                "date": "Fri, 17 Sep 2021 19:52:05 GMT",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "2218"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}
