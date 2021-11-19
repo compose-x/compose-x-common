@@ -28,23 +28,23 @@ readme = "README.rst"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-boto3 = { version = ">=1.18.0,<1.20", optional = true }
+boto3 = { version = "^1.18", optional = true }
 
 [tool.poetry.extras]
 aws = ["boto3"]
 
 [tool.poetry.dev-dependencies]
 placebo = ">=0.9.0,<1.0"
-pytest = "^6.2.4"
-Sphinx = "^4.2"
-sphinx-material = "^0.0"
-isort = "^5.9.3"
-black = "^21.9b0"
-pre-commit = "^2.13.0"
+pytest = "^6.2.5"
+Sphinx = "^4.3.0"
+sphinx-material = "^0.0.35"
+isort = "^5.10.1"
+black = "^21.11b1"
+pre-commit = "^2.15.0"
 flake8 = "^3.9.2"
 flake8-docstrings = "^1.6.0"
 coverage = "^5.5"
-tbump = "^6.4"
+tbump = "^6.6.0"
 
 [tool.tbump]
 github_url = "https://github.com/compose-x/compose-x-common/"
