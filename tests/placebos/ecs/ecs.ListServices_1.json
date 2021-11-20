@@ -1,0 +1,21 @@
+{
+    "status_code": 200,
+    "data": {
+        "serviceArns": [
+            "arn:aws:ecs:eu-west-1:000000000000:service/stg/kafka-confluent-apps-stg-controlcenter-SRRYSWD7OU5F-EcsServiceDefinition-kyrheR63Vnnm",
+            "arn:aws:ecs:eu-west-1:000000000000:service/stg/kafka-confluent-apps-stg-connect-P9LWTKDZONEREDACTED123-EcsServiceDefinition-nuye7silZw3X",
+            "arn:aws:ecs:eu-west-1:000000000000:service/stg/kafka-confluent-apps-stg-srreplica-5B3UHGTV94R0-EcsServiceDefinition-Bj9fvtjGlW9G"
+        ],
+        "ResponseMetadata": {
+            "RequestId": "83f16945-6685-49de-aad1-219693a74cee",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "83f16945-6685-49de-aad1-219693a74cee",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "559",
+                "date": "Sat, 20 Nov 2021 12:44:49 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "status_code": 200,
+    "data": {
+        "clusterArns": [
+            "arn:aws:ecs:eu-west-1:000000000000:cluster/stg",
+            "arn:aws:ecs:eu-west-1:000000000000:cluster/dev"
+        ],
+        "ResponseMetadata": {
+            "RequestId": "68a53cb8-a050-4acc-b402-36b5f956d7db",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "68a53cb8-a050-4acc-b402-36b5f956d7db",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "115",
+                "date": "Sat, 20 Nov 2021 12:44:49 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

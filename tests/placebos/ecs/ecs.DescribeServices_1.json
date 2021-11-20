@@ -1,0 +1,517 @@
+{
+    "status_code": 200,
+    "data": {
+        "services": [
+            {
+                "serviceArn": "arn:aws:ecs:eu-west-1:000000000000:service/stg/kafka-confluent-apps-stg-controlcenter-SRRYSWD7OU5F-EcsServiceDefinition-kyrheR63Vnnm",
+                "serviceName": "kafka-confluent-apps-stg-controlcenter-SRRYSWD7OU5F-EcsServiceDefinition-kyrheR63Vnnm",
+                "clusterArn": "arn:aws:ecs:eu-west-1:000000000000:cluster/stg",
+                "loadBalancers": [
+                    {
+                        "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:000000000000:targetgroup/kafka-Tgtco-K8DGL8A2283V/aeeb4858935d572c",
+                        "containerName": "controlcenter",
+                        "containerPort": 8080
+                    }
+                ],
+                "serviceRegistries": [],
+                "status": "ACTIVE",
+                "desiredCount": 1,
+                "runningCount": 1,
+                "pendingCount": 0,
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "taskDefinition": "arn:aws:ecs:eu-west-1:000000000000:task-definition/controlcenter:188",
+                "deploymentConfiguration": {
+                    "deploymentCircuitBreaker": {
+                        "enable": true,
+                        "rollback": true
+                    },
+                    "maximumPercent": 100,
+                    "minimumHealthyPercent": 0
+                },
+                "deployments": [
+                    {
+                        "id": "ecs-svc/0000000000003685088",
+                        "status": "PRIMARY",
+                        "taskDefinition": "arn:aws:ecs:eu-west-1:000000000000:task-definition/controlcenter:188",
+                        "desiredCount": 1,
+                        "pendingCount": 0,
+                        "runningCount": 1,
+                        "failedTasks": 0,
+                        "createdAt": {
+                            "__class__": "datetime",
+                            "year": 2021,
+                            "month": 11,
+                            "day": 5,
+                            "hour": 12,
+                            "minute": 9,
+                            "second": 26,
+                            "microsecond": 967000
+                        },
+                        "updatedAt": {
+                            "__class__": "datetime",
+                            "year": 2021,
+                            "month": 11,
+                            "day": 19,
+                            "hour": 16,
+                            "minute": 20,
+                            "second": 10,
+                            "microsecond": 579000
+                        },
+                        "launchType": "FARGATE",
+                        "platformVersion": "1.4.0",
+                        "platformFamily": "Linux",
+                        "networkConfiguration": {
+                            "awsvpcConfiguration": {
+                                "subnets": [
+                                    "subnet-05a29c79445d349b5",
+                                    "subnet-0e04c19e8b1e3f3ac",
+                                    "subnet-0e0af3f41d673a065"
+                                ],
+                                "securityGroups": [
+                                    "sg-020559b7a990cbfb3"
+                                ],
+                                "assignPublicIp": "DISABLED"
+                            }
+                        },
+                        "rolloutState": "COMPLETED",
+                        "rolloutStateReason": "ECS deployment ecs-svc/0000000000003685088 completed."
+                    }
+                ],
+                "roleArn": "arn:aws:iam::000000000000:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+                "events": [
+                    {
+                        "id": "d7b9c3c3-c2dc-484f-bca6-80225d941a58",
+                        "createdAt": {
+                            "__class__": "datetime",
+                            "year": 2021,
+                            "month": 11,
+                            "day": 1,
+                            "hour": 17,
+                            "minute": 42,
+                            "second": 34,
+                            "microsecond": 968000
+                        },
+                        "message": "(service kafka-confluent-apps-stg-controlcenter-SRRYSWD7OU5F-EcsServiceDefinition-kyrheR63Vnnm) has started 1 tasks: (task 84a3906678dd49e38d53cf8905c5fb0e)."
+                    }
+                ],
+                "createdAt": {
+                    "__class__": "datetime",
+                    "year": 2021,
+                    "month": 8,
+                    "day": 25,
+                    "hour": 12,
+                    "minute": 15,
+                    "second": 1,
+                    "microsecond": 865000
+                },
+                "placementConstraints": [],
+                "placementStrategy": [],
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-05a29c79445d349b5",
+                            "subnet-0e04c19e8b1e3f3ac",
+                            "subnet-0e0af3f41d673a065"
+                        ],
+                        "securityGroups": [
+                            "sg-020559b7a990cbfb3"
+                        ],
+                        "assignPublicIp": "DISABLED"
+                    }
+                },
+                "healthCheckGracePeriodSeconds": 300,
+                "schedulingStrategy": "REPLICA",
+                "createdBy": "arn:aws:iam::000000000000:role/cicd-cross-account-roles-CloudformationRole-1JEZONEREDACTED123",
+                "enableECSManagedTags": true,
+                "propagateTags": "SERVICE",
+                "enableExecuteCommand": false
+            },
+            {
+                "serviceArn": "arn:aws:ecs:eu-west-1:000000000000:service/stg/kafka-confluent-apps-stg-connect-P9LWTKDZONEREDACTED123-EcsServiceDefinition-nuye7silZw3X",
+                "serviceName": "kafka-confluent-apps-stg-connect-P9LWTKDZONEREDACTED123-EcsServiceDefinition-nuye7silZw3X",
+                "clusterArn": "arn:aws:ecs:eu-west-1:000000000000:cluster/stg",
+                "loadBalancers": [],
+                "serviceRegistries": [
+                    {
+                        "registryArn": "arn:aws:servicediscovery:eu-west-1:000000000000:service/srv-mqcr7yl2alpjw6yr",
+                        "port": 8083
+                    }
+                ],
+                "status": "ACTIVE",
+                "desiredCount": 1,
+                "runningCount": 1,
+                "pendingCount": 0,
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "taskDefinition": "arn:aws:ecs:eu-west-1:000000000000:task-definition/connect:242",
+                "deploymentConfiguration": {
+                    "deploymentCircuitBreaker": {
+                        "enable": true,
+                        "rollback": true
+                    },
+                    "maximumPercent": 200,
+                    "minimumHealthyPercent": 100
+                },
+                "deployments": [
+                    {
+                        "id": "ecs-svc/0000000000008994863",
+                        "status": "PRIMARY",
+                        "taskDefinition": "arn:aws:ecs:eu-west-1:000000000000:task-definition/connect:242",
+                        "desiredCount": 1,
+                        "pendingCount": 0,
+                        "runningCount": 1,
+                        "failedTasks": 0,
+                        "createdAt": {
+                            "__class__": "datetime",
+                            "year": 2021,
+                            "month": 11,
+                            "day": 5,
+                            "hour": 12,
+                            "minute": 3,
+                            "second": 40,
+                            "microsecond": 295000
+                        },
+                        "updatedAt": {
+                            "__class__": "datetime",
+                            "year": 2021,
+                            "month": 11,
+                            "day": 10,
+                            "hour": 9,
+                            "minute": 9,
+                            "second": 59,
+                            "microsecond": 133000
+                        },
+                        "launchType": "FARGATE",
+                        "platformVersion": "1.4.0",
+                        "platformFamily": "Linux",
+                        "networkConfiguration": {
+                            "awsvpcConfiguration": {
+                                "subnets": [
+                                    "subnet-0c16c47c9a431ce17",
+                                    "subnet-04b58036352322fed"
+                                ],
+                                "securityGroups": [
+                                    "sg-04b54dbda96448292"
+                                ],
+                                "assignPublicIp": "DISABLED"
+                            }
+                        },
+                        "rolloutState": "COMPLETED",
+                        "rolloutStateReason": "ECS deployment ecs-svc/0000000000008994863 completed."
+                    }
+                ],
+                "roleArn": "arn:aws:iam::000000000000:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+                "events": [
+                    {
+                        "id": "49cc0e74-8df3-46a0-b80b-d470be75eff1",
+                        "createdAt": {
+                            "__class__": "datetime",
+                            "year": 2021,
+                            "month": 10,
+                            "day": 28,
+                            "hour": 14,
+                            "minute": 53,
+                            "second": 47,
+                            "microsecond": 196000
+                        },
+                        "message": "(service kafka-confluent-apps-stg-connect-P9LWTKDZONEREDACTED123-EcsServiceDefinition-nuye7silZw3X) has reached a steady state."
+                    }
+                ],
+                "createdAt": {
+                    "__class__": "datetime",
+                    "year": 2021,
+                    "month": 8,
+                    "day": 25,
+                    "hour": 12,
+                    "minute": 11,
+                    "second": 58,
+                    "microsecond": 748000
+                },
+                "placementConstraints": [],
+                "placementStrategy": [],
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-0c16c47c9a431ce17",
+                            "subnet-04b58036352322fed"
+                        ],
+                        "securityGroups": [
+                            "sg-04b54dbda96448292"
+                        ],
+                        "assignPublicIp": "DISABLED"
+                    }
+                },
+                "schedulingStrategy": "REPLICA",
+                "createdBy": "arn:aws:iam::000000000000:role/cicd-cross-account-roles-CloudformationRole-1JEZONEREDACTED123",
+                "enableECSManagedTags": true,
+                "propagateTags": "SERVICE",
+                "enableExecuteCommand": true
+            },
+            {
+                "serviceArn": "arn:aws:ecs:eu-west-1:000000000000:service/stg/kafka-confluent-apps-stg-srreplica-5B3UHGTV94R0-EcsServiceDefinition-Bj9fvtjGlW9G",
+                "serviceName": "kafka-confluent-apps-stg-srreplica-5B3UHGTV94R0-EcsServiceDefinition-Bj9fvtjGlW9G",
+                "clusterArn": "arn:aws:ecs:eu-west-1:000000000000:cluster/stg",
+                "loadBalancers": [
+                    {
+                        "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:000000000000:targetgroup/kafka-Tgtco-YIYEDELY64QO/6697a138b5e52d5c",
+                        "containerName": "-sr-replica",
+                        "containerPort": 8081
+                    }
+                ],
+                "serviceRegistries": [
+                    {
+                        "registryArn": "arn:aws:servicediscovery:eu-west-1:000000000000:service/srv-pit47yeuesx4xiip",
+                        "port": 8081
+                    }
+                ],
+                "status": "ACTIVE",
+                "desiredCount": 1,
+                "runningCount": 1,
+                "pendingCount": 0,
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "taskDefinition": "arn:aws:ecs:eu-west-1:000000000000:task-definition/srreplica:33",
+                "deploymentConfiguration": {
+                    "deploymentCircuitBreaker": {
+                        "enable": true,
+                        "rollback": true
+                    },
+                    "maximumPercent": 200,
+                    "minimumHealthyPercent": 100
+                },
+                "deployments": [
+                    {
+                        "id": "ecs-svc/0000000000003936608",
+                        "status": "PRIMARY",
+                        "taskDefinition": "arn:aws:ecs:eu-west-1:000000000000:task-definition/srreplica:33",
+                        "desiredCount": 1,
+                        "pendingCount": 0,
+                        "runningCount": 1,
+                        "failedTasks": 0,
+                        "createdAt": {
+                            "__class__": "datetime",
+                            "year": 2021,
+                            "month": 11,
+                            "day": 5,
+                            "hour": 12,
+                            "minute": 3,
+                            "second": 28,
+                            "microsecond": 923000
+                        },
+                        "updatedAt": {
+                            "__class__": "datetime",
+                            "year": 2021,
+                            "month": 11,
+                            "day": 5,
+                            "hour": 12,
+                            "minute": 18,
+                            "second": 24,
+                            "microsecond": 580000
+                        },
+                        "launchType": "FARGATE",
+                        "platformVersion": "1.4.0",
+                        "platformFamily": "Linux",
+                        "networkConfiguration": {
+                            "awsvpcConfiguration": {
+                                "subnets": [
+                                    "subnet-05a29c79445d349b5",
+                                    "subnet-0e04c19e8b1e3f3ac",
+                                    "subnet-0e0af3f41d673a065"
+                                ],
+                                "securityGroups": [
+                                    "sg-003b5bb8f605f0081"
+                                ],
+                                "assignPublicIp": "DISABLED"
+                            }
+                        },
+                        "rolloutState": "COMPLETED",
+                        "rolloutStateReason": "ECS deployment ecs-svc/0000000000003936608 completed."
+                    }
+                ],
+                "roleArn": "arn:aws:iam::000000000000:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+                "events": [
+                    {
+                        "id": "3e8a7e36-7d0c-4207-b934-18ccc2641659",
+                        "createdAt": {
+                            "__class__": "datetime",
+                            "year": 2021,
+                            "month": 11,
+                            "day": 1,
+                            "hour": 8,
+                            "minute": 0,
+                            "second": 37,
+                            "microsecond": 715000
+                        },
+                        "message": "(service kafka-confluent-apps-stg-srreplica-5B3UHGTV94R0-EcsServiceDefinition-Bj9fvtjGlW9G) has reached a steady state."
+                    }
+                ],
+                "createdAt": {
+                    "__class__": "datetime",
+                    "year": 2021,
+                    "month": 10,
+                    "day": 14,
+                    "hour": 18,
+                    "minute": 5,
+                    "second": 11,
+                    "microsecond": 276000
+                },
+                "placementConstraints": [],
+                "placementStrategy": [],
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-05a29c79445d349b5",
+                            "subnet-0e04c19e8b1e3f3ac",
+                            "subnet-0e0af3f41d673a065"
+                        ],
+                        "securityGroups": [
+                            "sg-003b5bb8f605f0081"
+                        ],
+                        "assignPublicIp": "DISABLED"
+                    }
+                },
+                "healthCheckGracePeriodSeconds": 300,
+                "schedulingStrategy": "REPLICA",
+                "createdBy": "arn:aws:iam::000000000000:role/cicd-cross-account-roles-CloudformationRole-1JEZONEREDACTED123",
+                "enableECSManagedTags": true,
+                "propagateTags": "SERVICE",
+                "enableExecuteCommand": false
+            },
+            {
+                "serviceArn": "arn:aws:ecs:eu-west-1:000000000000:service/stg/-kafka-lag-exporter-stg-kafkalagexporter-1Q35FM1GXE74O-EcsServiceDefinition-ehIIwXjg17Oa",
+                "serviceName": "-kafka-lag-exporter-stg-kafkalagexporter-1Q35FM1GXE74O-EcsServiceDefinition-ehIIwXjg17Oa",
+                "clusterArn": "arn:aws:ecs:eu-west-1:000000000000:cluster/stg",
+                "loadBalancers": [],
+                "serviceRegistries": [],
+                "status": "ACTIVE",
+                "desiredCount": 1,
+                "runningCount": 1,
+                "pendingCount": 0,
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "taskDefinition": "arn:aws:ecs:eu-west-1:000000000000:task-definition/kafkalagexporter:11",
+                "deploymentConfiguration": {
+                    "deploymentCircuitBreaker": {
+                        "enable": true,
+                        "rollback": true
+                    },
+                    "maximumPercent": 200,
+                    "minimumHealthyPercent": 100
+                },
+                "deployments": [
+                    {
+                        "id": "ecs-svc/0000000000009905731",
+                        "status": "PRIMARY",
+                        "taskDefinition": "arn:aws:ecs:eu-west-1:000000000000:task-definition/kafkalagexporter:11",
+                        "desiredCount": 1,
+                        "pendingCount": 0,
+                        "runningCount": 1,
+                        "failedTasks": 0,
+                        "createdAt": {
+                            "__class__": "datetime",
+                            "year": 2021,
+                            "month": 11,
+                            "day": 17,
+                            "hour": 16,
+                            "minute": 58,
+                            "second": 54,
+                            "microsecond": 147000
+                        },
+                        "updatedAt": {
+                            "__class__": "datetime",
+                            "year": 2021,
+                            "month": 11,
+                            "day": 17,
+                            "hour": 17,
+                            "minute": 0,
+                            "second": 30,
+                            "microsecond": 12000
+                        },
+                        "launchType": "FARGATE",
+                        "platformVersion": "1.4.0",
+                        "platformFamily": "Linux",
+                        "networkConfiguration": {
+                            "awsvpcConfiguration": {
+                                "subnets": [
+                                    "subnet-05a29c79445d349b5",
+                                    "subnet-0e04c19e8b1e3f3ac",
+                                    "subnet-0e0af3f41d673a065"
+                                ],
+                                "securityGroups": [
+                                    "sg-0e6a5e8f181925662"
+                                ],
+                                "assignPublicIp": "DISABLED"
+                            }
+                        },
+                        "rolloutState": "COMPLETED",
+                        "rolloutStateReason": "ECS deployment ecs-svc/0000000000009905731 completed."
+                    }
+                ],
+                "roleArn": "arn:aws:iam::000000000000:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+                "events": [
+                    {
+                        "id": "3fb6eeae-ffe6-4006-b0fe-df28e24cce85",
+                        "createdAt": {
+                            "__class__": "datetime",
+                            "year": 2021,
+                            "month": 11,
+                            "day": 17,
+                            "hour": 16,
+                            "minute": 59,
+                            "second": 2,
+                            "microsecond": 96000
+                        },
+                        "message": "(service lag-exporter-stg-kafkalagexporter-1Q35FM1GXE74O-EcsServiceDefinition-ehIIwXjg17Oa) has started 1 tasks: (task 1610fb6c172c4c4f97645797f78711be)."
+                    }
+                ],
+                "createdAt": {
+                    "__class__": "datetime",
+                    "year": 2021,
+                    "month": 11,
+                    "day": 17,
+                    "hour": 16,
+                    "minute": 58,
+                    "second": 54,
+                    "microsecond": 147000
+                },
+                "placementConstraints": [],
+                "placementStrategy": [],
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-05a29c79445d349b5",
+                            "subnet-0e04c19e8b1e3f3ac",
+                            "subnet-0e0af3f41d673a065"
+                        ],
+                        "securityGroups": [
+                            "sg-0e6a5e8f181925662"
+                        ],
+                        "assignPublicIp": "DISABLED"
+                    }
+                },
+                "schedulingStrategy": "REPLICA",
+                "createdBy": "arn:aws:iam::000000000000:role/cicd-cross-account-roles-CloudformationRole-1JEZONEREDACTED123",
+                "enableECSManagedTags": true,
+                "propagateTags": "SERVICE",
+                "enableExecuteCommand": false
+            }
+        ],
+        "failures": [],
+        "ResponseMetadata": {
+            "RequestId": "d7291269-ca28-45eb-8257-dcb3ae3f4a43",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "d7291269-ca28-45eb-8257-dcb3ae3f4a43",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "78540",
+                "date": "Sat, 20 Nov 2021 12:44:48 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

@@ -1,0 +1,367 @@
+{
+    "status_code": 200,
+    "data": {
+        "clusters": [
+            {
+                "clusterArn": "arn:aws:ecs:eu-west-1:000000000000:cluster/test",
+                "clusterName": "test",
+                "status": "ACTIVE",
+                "registeredContainerInstancesCount": 0,
+                "runningTasksCount": 0,
+                "pendingTasksCount": 0,
+                "activeServicesCount": 0,
+                "statistics": [
+                    {
+                        "name": "runningEC2TasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "runningFargateTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "pendingEC2TasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "pendingFargateTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "runningExternalTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "pendingExternalTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "activeEC2ServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "activeFargateServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "drainingEC2ServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "drainingFargateServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "activeExternalServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "drainingExternalServiceCount",
+                        "value": "0"
+                    }
+                ],
+                "tags": [
+                    {
+                        "key": "owner",
+                        "value": "johnpreston"
+                    },
+                    {
+                        "key": "project",
+                        "value": "composex"
+                    },
+                    {
+                        "key": "environment",
+                        "value": "dev"
+                    },
+                    {
+                        "key": "live",
+                        "value": "no"
+                    },
+                    {
+                        "key": "costcentre",
+                        "value": "lambda"
+                    }
+                ],
+                "settings": [
+                    {
+                        "name": "containerInsights",
+                        "value": "enabled"
+                    }
+                ],
+                "capacityProviders": [
+                    "FARGATE_SPOT",
+                    "FARGATE"
+                ],
+                "defaultCapacityProviderStrategy": [
+                    {
+                        "capacityProvider": "FARGATE_SPOT",
+                        "weight": 2,
+                        "base": 0
+                    },
+                    {
+                        "capacityProvider": "FARGATE",
+                        "weight": 1,
+                        "base": 0
+                    }
+                ],
+                "attachments": [],
+                "attachmentsStatus": "UPDATE_COMPLETE"
+            },
+            {
+                "clusterArn": "arn:aws:ecs:eu-west-1:000000000000:cluster/default",
+                "clusterName": "default",
+                "status": "ACTIVE",
+                "registeredContainerInstancesCount": 0,
+                "runningTasksCount": 0,
+                "pendingTasksCount": 0,
+                "activeServicesCount": 0,
+                "statistics": [
+                    {
+                        "name": "runningEC2TasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "runningFargateTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "pendingEC2TasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "pendingFargateTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "runningExternalTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "pendingExternalTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "activeEC2ServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "activeFargateServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "drainingEC2ServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "drainingFargateServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "activeExternalServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "drainingExternalServiceCount",
+                        "value": "0"
+                    }
+                ],
+                "tags": [],
+                "settings": [
+                    {
+                        "name": "containerInsights",
+                        "value": "enabled"
+                    }
+                ],
+                "capacityProviders": [],
+                "defaultCapacityProviderStrategy": [],
+                "attachments": []
+            },
+            {
+                "clusterArn": "arn:aws:ecs:eu-west-1:000000000000:cluster/ANewCluster",
+                "clusterName": "ANewCluster",
+                "configuration": {
+                    "executeCommandConfiguration": {
+                        "kmsKeyId": "arn:aws:kms:eu-west-1:000000000000:key/755cb0a2-053a-4df6-a5dc-c737915e2235",
+                        "logging": "OVERRIDE",
+                        "logConfiguration": {
+                            "cloudWatchLogGroupName": "/ecs/execute-logs/ANewCluster",
+                            "cloudWatchEncryptionEnabled": true,
+                            "s3BucketName": "test-ecs-cluster-with-log-ecsclusterloggingbucket-yxgr5wjsxjtl",
+                            "s3EncryptionEnabled": true,
+                            "s3KeyPrefix": "ecs/execute-logs/ANewCluster/"
+                        }
+                    }
+                },
+                "status": "ACTIVE",
+                "registeredContainerInstancesCount": 0,
+                "runningTasksCount": 0,
+                "pendingTasksCount": 0,
+                "activeServicesCount": 0,
+                "statistics": [
+                    {
+                        "name": "runningEC2TasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "runningFargateTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "pendingEC2TasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "pendingFargateTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "runningExternalTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "pendingExternalTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "activeEC2ServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "activeFargateServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "drainingEC2ServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "drainingFargateServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "activeExternalServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "drainingExternalServiceCount",
+                        "value": "0"
+                    }
+                ],
+                "tags": [
+                    {
+                        "key": "aws:cloudformation:stack-id",
+                        "value": "arn:aws:cloudformation:eu-west-1:000000000000:stack/test-ecs-cluster-with-logging/97fdfdf0-2851-11ec-b043-021af2d22c9d"
+                    },
+                    {
+                        "key": "aws:cloudformation:stack-name",
+                        "value": "test-ecs-cluster-with-logging"
+                    },
+                    {
+                        "key": "aws:cloudformation:logical-id",
+                        "value": "EcsCluster"
+                    }
+                ],
+                "settings": [],
+                "capacityProviders": [
+                    "FARGATE_SPOT",
+                    "FARGATE"
+                ],
+                "defaultCapacityProviderStrategy": [
+                    {
+                        "capacityProvider": "FARGATE",
+                        "weight": 1,
+                        "base": 0
+                    },
+                    {
+                        "capacityProvider": "FARGATE_SPOT",
+                        "weight": 2,
+                        "base": 2
+                    }
+                ],
+                "attachments": [],
+                "attachmentsStatus": "UPDATE_COMPLETE"
+            },
+            {
+                "clusterArn": "arn:aws:ecs:eu-west-1:000000000000:cluster/testing",
+                "clusterName": "testing",
+                "status": "ACTIVE",
+                "registeredContainerInstancesCount": 0,
+                "runningTasksCount": 0,
+                "pendingTasksCount": 0,
+                "activeServicesCount": 0,
+                "statistics": [
+                    {
+                        "name": "runningEC2TasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "runningFargateTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "pendingEC2TasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "pendingFargateTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "runningExternalTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "pendingExternalTasksCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "activeEC2ServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "activeFargateServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "drainingEC2ServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "drainingFargateServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "activeExternalServiceCount",
+                        "value": "0"
+                    },
+                    {
+                        "name": "drainingExternalServiceCount",
+                        "value": "0"
+                    }
+                ],
+                "tags": [],
+                "settings": [
+                    {
+                        "name": "containerInsights",
+                        "value": "enabled"
+                    }
+                ],
+                "capacityProviders": [],
+                "defaultCapacityProviderStrategy": [],
+                "attachments": []
+            }
+        ],
+        "failures": [],
+        "ResponseMetadata": {
+            "RequestId": "c2fef8b8-661a-4117-a65d-a71f39d9e394",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "c2fef8b8-661a-4117-a65d-a71f39d9e394",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "5045",
+                "date": "Sat, 20 Nov 2021 12:44:49 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

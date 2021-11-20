@@ -1,0 +1,202 @@
+{
+    "status_code": 200,
+    "data": {
+        "ScalableTargets": [
+            {
+                "ServiceNamespace": "ecs",
+                "ResourceId": "service/dev/kafka-confluent-apps-dev-controlcenter-151WBFCEQ9GHQ-EcsServiceDefinition-MjDLC2rcffYe",
+                "ScalableDimension": "ecs:service:DesiredCount",
+                "MinCapacity": 1,
+                "MaxCapacity": 1,
+                "RoleARN": "arn:aws:iam::000000000000:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+                "CreationTime": {
+                    "__class__": "datetime",
+                    "year": 2021,
+                    "month": 8,
+                    "day": 25,
+                    "hour": 12,
+                    "minute": 2,
+                    "second": 39,
+                    "microsecond": 727000
+                },
+                "SuspendedState": {
+                    "DynamicScalingInSuspended": false,
+                    "DynamicScalingOutSuspended": false,
+                    "ScheduledScalingSuspended": false
+                }
+            },
+            {
+                "ServiceNamespace": "ecs",
+                "ResourceId": "service/dev/kafka-confluent-apps-dev-connect-1CX3MI9VLRLQ7-EcsServiceDefinition-XPyvtkPIfqc2",
+                "ScalableDimension": "ecs:service:DesiredCount",
+                "MinCapacity": 2,
+                "MaxCapacity": 5,
+                "RoleARN": "arn:aws:iam::000000000000:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+                "CreationTime": {
+                    "__class__": "datetime",
+                    "year": 2021,
+                    "month": 8,
+                    "day": 25,
+                    "hour": 12,
+                    "minute": 0,
+                    "second": 47,
+                    "microsecond": 591000
+                },
+                "SuspendedState": {
+                    "DynamicScalingInSuspended": false,
+                    "DynamicScalingOutSuspended": false,
+                    "ScheduledScalingSuspended": false
+                }
+            },
+            {
+                "ServiceNamespace": "ecs",
+                "ResourceId": "service/dev/kafka-confluent-apps-dev-srreplica-R8YEOX2SIIZONEREDACTED123-EcsServiceDefinition-W5mJPB6ktqKX",
+                "ScalableDimension": "ecs:service:DesiredCount",
+                "MinCapacity": 1,
+                "MaxCapacity": 1,
+                "RoleARN": "arn:aws:iam::000000000000:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+                "CreationTime": {
+                    "__class__": "datetime",
+                    "year": 2021,
+                    "month": 9,
+                    "day": 29,
+                    "hour": 17,
+                    "minute": 50,
+                    "second": 35,
+                    "microsecond": 83000
+                },
+                "SuspendedState": {
+                    "DynamicScalingInSuspended": false,
+                    "DynamicScalingOutSuspended": false,
+                    "ScheduledScalingSuspended": false
+                }
+            },
+            {
+                "ServiceNamespace": "ecs",
+                "ResourceId": "service/stg/kafka-confluent-apps-stg-srreplica-5B3UHGTV94R0-EcsServiceDefinition-Bj9fvtjGlW9G",
+                "ScalableDimension": "ecs:service:DesiredCount",
+                "MinCapacity": 1,
+                "MaxCapacity": 1,
+                "RoleARN": "arn:aws:iam::000000000000:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+                "CreationTime": {
+                    "__class__": "datetime",
+                    "year": 2021,
+                    "month": 10,
+                    "day": 14,
+                    "hour": 18,
+                    "minute": 8,
+                    "second": 13,
+                    "microsecond": 709000
+                },
+                "SuspendedState": {
+                    "DynamicScalingInSuspended": false,
+                    "DynamicScalingOutSuspended": false,
+                    "ScheduledScalingSuspended": false
+                }
+            },
+            {
+                "ServiceNamespace": "ecs",
+                "ResourceId": "service/stg/kafka-confluent-apps-stg-controlcenter-SRRYSWD7OU5F-EcsServiceDefinition-kyrheR63Vnnm",
+                "ScalableDimension": "ecs:service:DesiredCount",
+                "MinCapacity": 1,
+                "MaxCapacity": 1,
+                "RoleARN": "arn:aws:iam::000000000000:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+                "CreationTime": {
+                    "__class__": "datetime",
+                    "year": 2021,
+                    "month": 8,
+                    "day": 25,
+                    "hour": 12,
+                    "minute": 16,
+                    "second": 57,
+                    "microsecond": 781000
+                },
+                "SuspendedState": {
+                    "DynamicScalingInSuspended": false,
+                    "DynamicScalingOutSuspended": false,
+                    "ScheduledScalingSuspended": false
+                }
+            },
+            {
+                "ServiceNamespace": "ecs",
+                "ResourceId": "service/stg/kafka-lag-exporter-stg-kafkalagexporter-1Q35FM1GXE74O-EcsServiceDefinition-ehIIwXjg17Oa",
+                "ScalableDimension": "ecs:service:DesiredCount",
+                "MinCapacity": 1,
+                "MaxCapacity": 1,
+                "RoleARN": "arn:aws:iam::000000000000:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+                "CreationTime": {
+                    "__class__": "datetime",
+                    "year": 2021,
+                    "month": 11,
+                    "day": 17,
+                    "hour": 17,
+                    "minute": 0,
+                    "second": 15,
+                    "microsecond": 99000
+                },
+                "SuspendedState": {
+                    "DynamicScalingInSuspended": false,
+                    "DynamicScalingOutSuspended": false,
+                    "ScheduledScalingSuspended": false
+                }
+            },
+            {
+                "ServiceNamespace": "ecs",
+                "ResourceId": "service/dev/kafka-lag-exporter-dev-kafkalagexporter-JUVWL4LC9EMF-EcsServiceDefinition-M4u7aQaZONEREDACTED123m7U",
+                "ScalableDimension": "ecs:service:DesiredCount",
+                "MinCapacity": 1,
+                "MaxCapacity": 1,
+                "RoleARN": "arn:aws:iam::000000000000:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+                "CreationTime": {
+                    "__class__": "datetime",
+                    "year": 2021,
+                    "month": 11,
+                    "day": 17,
+                    "hour": 0,
+                    "minute": 26,
+                    "second": 52,
+                    "microsecond": 34000
+                },
+                "SuspendedState": {
+                    "DynamicScalingInSuspended": false,
+                    "DynamicScalingOutSuspended": false,
+                    "ScheduledScalingSuspended": false
+                }
+            },
+            {
+                "ServiceNamespace": "ecs",
+                "ResourceId": "service/stg/kafka-confluent-apps-stg-connect-P9LWTKDZONEREDACTED123-EcsServiceDefinition-nuye7silZw3X",
+                "ScalableDimension": "ecs:service:DesiredCount",
+                "MinCapacity": 1,
+                "MaxCapacity": 6,
+                "RoleARN": "arn:aws:iam::000000000000:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+                "CreationTime": {
+                    "__class__": "datetime",
+                    "year": 2021,
+                    "month": 8,
+                    "day": 25,
+                    "hour": 12,
+                    "minute": 14,
+                    "second": 16,
+                    "microsecond": 390000
+                },
+                "SuspendedState": {
+                    "DynamicScalingInSuspended": false,
+                    "DynamicScalingOutSuspended": false,
+                    "ScheduledScalingSuspended": false
+                }
+            }
+        ],
+        "ResponseMetadata": {
+            "RequestId": "95257664-d099-4a33-a7b3-4bc6d0d4e332",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "95257664-d099-4a33-a7b3-4bc6d0d4e332",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "4233",
+                "date": "Sat, 20 Nov 2021 13:00:23 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}
