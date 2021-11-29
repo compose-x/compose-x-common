@@ -1,0 +1,88 @@
+{
+    "status_code": 200,
+    "data": {
+        "Vpcs": [
+            {
+                "CidrBlock": "100.126.0.0/24",
+                "DhcpOptionsId": "dopt-abe28ecd",
+                "State": "available",
+                "VpcId": "vpc-06df22781966cfbfd",
+                "OwnerId": "000000000000",
+                "InstanceTenancy": "default",
+                "CidrBlockAssociationSet": [
+                    {
+                        "AssociationId": "vpc-cidr-assoc-000000000000954ab",
+                        "CidrBlock": "100.126.0.0/24",
+                        "CidrBlockState": {
+                            "State": "associated"
+                        }
+                    }
+                ],
+                "IsDefault": false,
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "public-vpc"
+                    }
+                ]
+            },
+            {
+                "CidrBlock": "192.168.78.0/24",
+                "DhcpOptionsId": "dopt-abe28ecd",
+                "State": "available",
+                "VpcId": "vpc-0bea6323bb0e06d3a",
+                "OwnerId": "000000000000",
+                "InstanceTenancy": "default",
+                "CidrBlockAssociationSet": [
+                    {
+                        "AssociationId": "vpc-cidr-assoc-0e4a3c5bdba21afc9",
+                        "CidrBlock": "192.168.78.0/24",
+                        "CidrBlockState": {
+                            "State": "associated"
+                        }
+                    }
+                ],
+                "IsDefault": false,
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "test123"
+                    }
+                ]
+            },
+            {
+                "CidrBlock": "172.31.0.0/16",
+                "DhcpOptionsId": "dopt-abe28ecd",
+                "State": "available",
+                "VpcId": "vpc-0f9e724eada9f5673",
+                "OwnerId": "000000000000",
+                "InstanceTenancy": "default",
+                "CidrBlockAssociationSet": [
+                    {
+                        "AssociationId": "vpc-cidr-assoc-01402b5c22329f173",
+                        "CidrBlock": "172.31.0.0/16",
+                        "CidrBlockState": {
+                            "State": "associated"
+                        }
+                    }
+                ],
+                "IsDefault": true
+            }
+        ],
+        "ResponseMetadata": {
+            "RequestId": "3e19e523-a7a3-4ac9-88ff-4feca4f38ee6",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "3e19e523-a7a3-4ac9-88ff-4feca4f38ee6",
+                "cache-control": "no-cache, no-store",
+                "strict-transport-security": "max-age=31536000; includeSubDomains",
+                "vary": "accept-encoding",
+                "content-type": "text/xml;charset=UTF-8",
+                "content-length": "2830",
+                "date": "Mon, 29 Nov 2021 15:18:19 GMT",
+                "server": "AmazonEC2"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

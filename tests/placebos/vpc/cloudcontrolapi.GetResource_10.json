@@ -1,0 +1,21 @@
+{
+    "status_code": 200,
+    "data": {
+        "TypeName": "AWS::EC2::Subnet",
+        "ResourceDescription": {
+            "Identifier": "subnet-0a53c9baf8cf6e795",
+            "Properties": "{\"AssignIpv6AddressOnCreation\":false,\"VpcId\":\"vpc-06df22781966cfbfd\",\"MapPublicIpOnLaunch\":false,\"NetworkAclAssociationId\":\"aclassoc-2354a556\",\"AvailabilityZone\":\"eu-west-1a\",\"CidrBlock\":\"100.126.0.0/25\",\"SubnetId\":\"subnet-0a53c9baf8cf6e795\",\"Tags\":[{\"Value\":\"public-a\",\"Key\":\"Name\"}]}"
+        },
+        "ResponseMetadata": {
+            "RequestId": "01dce1a7-1501-49ed-bd70-6e61f25195f4",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "01dce1a7-1501-49ed-bd70-6e61f25195f4",
+                "date": "Mon, 29 Nov 2021 15:18:32 GMT",
+                "content-type": "application/x-amz-json-1.0",
+                "content-length": "430"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

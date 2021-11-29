@@ -5,13 +5,23 @@
 """
 AWS Useful functions
 """
-
+import json
 import re
 
-try:
-    from boto3.session import Session
-except ImportError:
-    raise Exception("Please run $pip install compose-x-common[aws] to use aws package")
+from boto3.session import Session
+
+
+def get_session(session=None):
+    """
+    Simple function to assign a new session when none given
+
+    :param session:
+    :return: session
+    :rtype: boto3.session.Session
+    """
+    if session is None:
+        return Session()
+    return session
 
 
 def validate_iam_role_arn(arn):
@@ -44,8 +54,6 @@ def get_assume_role_session(session, arn, session_name=None, region=None):
     if not session_name:
         session_name = "stsAssumeRole"
     validate_iam_role_arn(arn)
-    if not session:
-        session = Session()
     creds = session.client("sts").assume_role(
         RoleArn=arn,
         RoleSessionName=session_name,
@@ -60,7 +68,26 @@ def get_assume_role_session(session, arn, session_name=None, region=None):
     )
 
 
-def get_region_azs(session):
+def get_resource_from_ccapi(type_name: str, identifier, session=None, **kwargs):
+    """
+    Wrapper around cloudcontrol.get_resource
+
+    :param str type_name:
+    :param str|dict identifier:
+    :param boto3.session.Session session:
+    :param dict kwargs:
+    :return:
+    """
+    session = get_session(session)
+    client = session.client("cloudcontrol")
+    resource_r = client.get_resource(
+        TypeName=type_name, Identifier=identifier, **kwargs
+    )
+    resource_properties = json.loads(resource_r["ResourceDescription"]["Properties"])
+    return resource_properties
+
+
+def get_region_azs(session=None):
     """Function to return the AZ from a given region. Uses default region for this
 
     :param boto3.session.Session session: Boto3 session
@@ -68,10 +95,11 @@ def get_region_azs(session):
     :return: list of AZs in the given region
     :rtype: list
     """
+    session = get_session(session)
     return session.client("ec2").describe_availability_zones()["AvailabilityZones"]
 
 
-def get_account_id(session):
+def get_account_id(session=None):
     """
     Function to get the current session account ID
 
@@ -80,4 +108,5 @@ def get_account_id(session):
     :return: account ID
     :rtype: str
     """
+    session = get_session(session)
     return session.client("sts").get_caller_identity()["Account"]

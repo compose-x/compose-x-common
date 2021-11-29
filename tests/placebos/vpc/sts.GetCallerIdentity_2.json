@@ -1,0 +1,19 @@
+{
+    "status_code": 200,
+    "data": {
+        "UserId": "AROAVOAWVJQOHZONEREDACTED123:john@ews-network.net",
+        "Account": "000000000000",
+        "Arn": "arn:aws:sts::000000000000:assumed-role/role",
+        "ResponseMetadata": {
+            "RequestId": "a4b9720d-fac0-44d5-b8c6-5db04db13bc7",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "a4b9720d-fac0-44d5-b8c6-5db04db13bc7",
+                "content-type": "text/xml",
+                "content-length": "494",
+                "date": "Mon, 29 Nov 2021 15:18:25 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

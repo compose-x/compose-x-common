@@ -1,0 +1,28 @@
+{
+    "status_code": 200,
+    "data": {
+        "PaginationToken": "",
+        "ResourceTagMappingList": [
+            {
+                "ResourceARN": "arn:aws:ec2:eu-west-1:000000000000:vpc/vpc-0bea6323bb0e06d3a",
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "test123"
+                    }
+                ]
+            }
+        ],
+        "ResponseMetadata": {
+            "RequestId": "710941a1-6e4f-4e32-99ea-3ed925a626fd",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "710941a1-6e4f-4e32-99ea-3ed925a626fd",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "170",
+                "date": "Mon, 29 Nov 2021 16:37:27 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

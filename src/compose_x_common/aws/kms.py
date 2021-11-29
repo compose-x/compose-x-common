@@ -9,6 +9,8 @@ from boto3.session import Session
 
 from compose_x_common.compose_x_common import keyisset
 
+from . import get_session
+
 KMS_KEY_ARN_RE = re.compile(
     r"(?:^arn:aws(?:-[a-z]+)?:kms:[\S]+:\d{12}:key/)(?P<key_id>[a-zA-Z0-9]{8}(?:-[a-zA-Z0-9]{4}){3}-[a-zA-Z0-9]{12})$"
 )
@@ -17,20 +19,19 @@ KMS_ALIAS_ARN_RE = re.compile(
 )
 
 
-def list_all_keys(keys=None, next_token=None, kms_session=None):
+def list_all_keys(keys=None, next_token=None, session=None):
     """
     Function to list all the KMS keys the session allows
 
     :param list keys:
     :param str next_token:
-    :param boto3.session.Session kms_session:
+    :param boto3.session.Session session:
     :return:
     """
-    if kms_session is None:
-        kms_session = Session()
+    session = get_session(session)
     if keys is None:
         keys = []
-    client = kms_session.client("kms")
+    client = session.client("kms")
     if not next_token:
         keys_r = client.list_keys()
     else:
@@ -40,22 +41,21 @@ def list_all_keys(keys=None, next_token=None, kms_session=None):
     else:
         return keys
     if keyisset("NextMarker", keys_r):
-        keys += list_all_keys(keys, keys_r["NextMarker"], kms_session)
+        keys += list_all_keys(keys, keys_r["NextMarker"], session)
     return keys
 
 
-def list_all_aliases(aliases=None, next_token=None, kms_session=None):
+def list_all_aliases(aliases=None, next_token=None, session=None):
     """
     Function to list all the KMS keys the session allows
 
     :param list aliases:
     :param str next_token:
-    :param boto3.session.Session kms_session:
+    :param boto3.session.Session session:
     :return:
     """
-    if kms_session is None:
-        kms_session = Session()
-    client = kms_session.client("kms")
+    session = get_session(session)
+    client = session.client("kms")
     if aliases is None:
         aliases = []
     if not next_token:
@@ -67,27 +67,26 @@ def list_all_aliases(aliases=None, next_token=None, kms_session=None):
     else:
         return aliases
     if keyisset("NextMarker", aliases_r):
-        aliases += list_all_aliases(aliases, aliases_r["NextMarker"], kms_session)
+        aliases += list_all_aliases(aliases, aliases_r["NextMarker"], session)
     return aliases
 
 
-def get_key_from_alias(alias, keys=None, alias_failback=False, kms_session=None):
+def get_key_from_alias(alias, keys=None, alias_failback=False, session=None):
     """
 
     :param str alias: The alias or part of it that we are looking for.
     :param list keys:
     :param bool alias_failback:
-    :param boto3.session.Session kms_session:
+    :param boto3.session.Session session:
     :return:
     """
     if not alias.startswith("alias/"):
         warnings.warn("The alias must start with alias/. Adding alias/")
         alias = f"alias/{alias}"
-    if kms_session is None:
-        kms_session = Session()
-    aliases = list_all_aliases(kms_session=kms_session)
+    session = get_session(session)
+    aliases = list_all_aliases(session=session)
     if not keys:
-        keys = list_all_keys(kms_session=kms_session)
+        keys = list_all_keys(session=session)
     for _alias in aliases:
         if alias.startswith("alias/") and _alias["AliasName"] == alias:
             for key in keys:

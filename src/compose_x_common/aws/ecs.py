@@ -10,6 +10,8 @@ from boto3.session import Session
 
 from compose_x_common.compose_x_common import chunked_iterable, keyisset
 
+from . import get_session
+
 CLUSTER_NAME_FROM_ARN = re.compile(
     r"arn:aws(?:-[a-z-]+)?:ecs:[\S]+:[\d]{12}:cluster/(?P<name>[a-zA-Z0-9-_]+$)"
 )
@@ -26,15 +28,13 @@ def list_all_ecs_clusters(clusters=None, next_token=None, session=None, **kwargs
     """
     if clusters is None:
         clusters = []
-    if session is None:
-        session = Session()
+    session = get_session(session)
     client = session.client("ecs")
     if next_token:
         clusters_r = client.list_clusters(nextToken=next_token, **kwargs)
     else:
         clusters_r = client.list_clusters(**kwargs)
-    if keyisset("clusterArns", clusters_r):
-        clusters += clusters_r["clusterArns"]
+    clusters += clusters_r["clusterArns"]
     if keyisset("nextToken", clusters_r):
         return list_all_ecs_clusters(
             clusters, clusters_r["nextToken"], session, **kwargs
@@ -55,8 +55,7 @@ def describe_all_ecs_clusters(
     clusters = []
     if return_as_map:
         clusters = {}
-    if session is None:
-        session = Session()
+    session = get_session(session)
     client = session.client("ecs")
     cluster_chunks = chunked_iterable(clusters_to_list, size=10)
     for clusters_to_describe in cluster_chunks:
@@ -93,8 +92,7 @@ def describe_all_ecs_clusters_from_ccapi(
     clusters = []
     if return_as_map:
         clusters = {}
-    if session is None:
-        session = Session()
+    session = get_session(session)
     client = session.client("cloudcontrol")
     for cluster_arn in clusters_to_list:
         cluster_r = client.get_resource(
@@ -126,8 +124,7 @@ def list_all_services(
     """
     if services is None:
         services = []
-    if session is None:
-        session = Session()
+    session = get_session(session)
     client = session.client("ecs")
     args = deepcopy(kwargs)
     if cluster_name:
@@ -135,8 +132,7 @@ def list_all_services(
     if next_token:
         args["nextToken"] = next_token
     services_r = client.list_services(**args)
-    if keyisset("serviceArns", services_r):
-        services += services_r["serviceArns"]
+    services += services_r["serviceArns"]
     if keyisset("nextToken", services_r):
         return list_all_services(
             cluster_name, services, services_r["nextToken"], session, **args
@@ -155,8 +151,7 @@ def describe_all_services(
     :param return_as_map:
     :return:
     """
-    if session is None:
-        session = Session()
+    session = get_session(session)
     client = session.client("ecs")
     chunks = chunked_iterable(services_list, size=10)
     services = []

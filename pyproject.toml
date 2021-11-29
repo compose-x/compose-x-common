@@ -28,7 +28,7 @@ readme = "README.rst"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-boto3 = { version = "^1.18", optional = true }
+boto3 = "^1.18"
 
 [tool.poetry.extras]
 aws = ["boto3"]

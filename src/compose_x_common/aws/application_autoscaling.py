@@ -8,6 +8,8 @@ from boto3.session import Session
 
 from compose_x_common.compose_x_common import keyisset
 
+from . import get_session
+
 
 def list_all_scalable_targets(
     namespace=None, targets=None, next_token=None, session=None, **kwargs
@@ -23,8 +25,7 @@ def list_all_scalable_targets(
     """
     if targets is None:
         targets = []
-    if session is None:
-        session = Session()
+    session = get_session(session)
     client = session.client("application-autoscaling")
     args = deepcopy(kwargs)
     if not namespace and not keyisset("ServiceNamespace", args):

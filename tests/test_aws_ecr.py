@@ -14,8 +14,8 @@ HERE = path.abspath(path.dirname(__file__))
 
 
 def test_image_retag():
-    ecr_test_session = Session()
-    pill = placebo.attach(ecr_test_session, data_path=f"{HERE}/placebos/ecr/")
+    test_session = Session()
+    pill = placebo.attach(test_session, data_path=f"{HERE}/placebos/ecr/")
     # pill.record()
     pill.playback()
     retag_image(
@@ -23,13 +23,13 @@ def test_image_retag():
         "3.7",
         "expectedtag",
         delete_old_tag=True,
-        ecr_session=ecr_test_session,
+        session=test_session,
     )
 
 
 def test_missing_image_retag():
-    ecr_test_session = Session()
-    pill = placebo.attach(ecr_test_session, data_path=f"{HERE}/placebos/ecr/")
+    test_session = Session()
+    pill = placebo.attach(test_session, data_path=f"{HERE}/placebos/ecr/")
     # pill.record()
     pill.playback()
     retag_image(
@@ -37,5 +37,5 @@ def test_missing_image_retag():
         "3.7",
         "expectedtag",
         delete_old_tag=True,
-        ecr_session=ecr_test_session,
+        session=test_session,
     )

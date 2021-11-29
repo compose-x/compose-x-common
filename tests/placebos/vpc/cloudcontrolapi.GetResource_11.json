@@ -1,0 +1,21 @@
+{
+    "status_code": 200,
+    "data": {
+        "TypeName": "AWS::EC2::VPC",
+        "ResourceDescription": {
+            "Identifier": "vpc-0bea6323bb0e06d3a",
+            "Properties": "{\"VpcId\":\"vpc-0bea6323bb0e06d3a\",\"InstanceTenancy\":\"default\",\"CidrBlockAssociations\":[\"vpc-cidr-assoc-0e4a3c5bdba21afc9\"],\"CidrBlock\":\"192.168.78.0/24\",\"DefaultNetworkAcl\":\"acl-03ca0ff9f19338f10\",\"EnableDnsSupport\":true,\"Ipv6CidrBlocks\":[],\"DefaultSecurityGroup\":\"sg-0eee4075a2e7b9a05\",\"EnableDnsHostnames\":false,\"Tags\":[{\"Value\":\"test123\",\"Key\":\"Name\"}]}"
+        },
+        "ResponseMetadata": {
+            "RequestId": "2e8a8df6-a91b-4cd7-b9f1-da4e74e78a88",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "2e8a8df6-a91b-4cd7-b9f1-da4e74e78a88",
+                "date": "Mon, 29 Nov 2021 16:37:28 GMT",
+                "content-type": "application/x-amz-json-1.0",
+                "content-length": "500"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

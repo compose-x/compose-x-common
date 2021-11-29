@@ -10,6 +10,8 @@ except ImportError:
     raise Exception("Please run $pip install compose-x-common[aws] to use aws package")
 from compose_x_common.compose_x_common import keyisset
 
+from . import get_session
+
 PRIVATE_ECR_URI_RE = re.compile(
     r"(?P<account_id>\d{12}).dkr.ecr.(?P<region>[a-z0-9-]+).amazonaws.com/"
     r"(?P<repo_name>[a-zA-Z0-9-_./]+)(?P<tag>(?:\@sha[\d]+:[a-z-Z0-9]+$)|(?::[\S]+$))"
@@ -21,15 +23,14 @@ def get_docker_image_details(
     image_tag,
     image_digest=None,
     registry_id=None,
-    ecr_session=None,
+    session=None,
 ):
     """
     Function to retrive the image information
     :return:
     """
-    if not ecr_session:
-        ecr_session = Session()
-    client = ecr_session.client("ecr")
+    session = get_session(session)
+    client = session.client("ecr")
     image_q = {}
     if not image_digest and not image_tag:
         raise KeyError("You must specify at least one of image_digest or image_tag")
@@ -59,7 +60,7 @@ def retag_image(
     image_digest=None,
     delete_old_tag=True,
     registry_id=None,
-    ecr_session=None,
+    session=None,
 ):
     """
     Function to rename an image in ECR via API call
@@ -69,16 +70,15 @@ def retag_image(
     :param bool delete_old_tag: Whether or no to keep the tag for the image
     :param str image_digest: The image digest (sha)
     :param str image_tag: The image
-    :param boto3.session.Session ecr_session:
+    :param boto3.session.Session session:
     """
-    if not ecr_session:
-        ecr_session = Session()
+    session = get_session(session)
     if registry_id is None:
-        registry_id = ecr_session.client("sts").get_caller_identity()["Account"]
+        registry_id = session.client("sts").get_caller_identity()["Account"]
     print(f"Registry ID set to {registry_id}")
-    client = ecr_session.client("ecr")
+    client = session.client("ecr")
     images = get_docker_image_details(
-        repostory_name, image_tag, image_digest, registry_id, ecr_session
+        repostory_name, image_tag, image_digest, registry_id, session
     )
     if not images:
         print("No images found. Skipping")

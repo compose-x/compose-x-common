@@ -10,7 +10,6 @@ Main module.
 import itertools
 import re
 import warnings
-from os import environ
 
 from dateutil.relativedelta import relativedelta
 
@@ -54,24 +53,13 @@ def keypresent(key, y):
     return False
 
 
-def get_duration(time_from, duration_exp, env_key=None):
+def get_duration(duration_exp):
     """
     Function to define the time delta
 
-    :param datetime.datetime time_from:
     :param str duration_exp:
-    :param str env_key:
-    :return: datetime of the delta between from_time until expressed duration
+    :return: timedelta
     """
-    if isinstance(env_key, str):
-        duration_exp = environ.get(env_key, duration_exp)
-    else:
-        duration_exp = environ.get("ECR_IMAGES_DURATION_DELTA", duration_exp)
-    if not DURATIONS_RE.match(duration_exp):
-        warnings.warn(
-            f"The provided duration, {duration_exp}, does not match expected regexp "
-            f"{DURATIONS_RE.pattern}. Using default of 7days"
-        )
     parts = DURATIONS_RE.match(duration_exp)
     milliseconds = int(parts.group("ms")) if parts.group("ms") else 0
     seconds = int(parts.group("s")) if parts.group("s") else 0
@@ -80,7 +68,7 @@ def get_duration(time_from, duration_exp, env_key=None):
     days = int(parts.group("d")) if parts.group("d") else 0
     weeks = int(parts.group("w")) if parts.group("w") else 0
     years = int(parts.group("y")) if parts.group("y") else 0
-    up_to = time_from + relativedelta(
+    delta = relativedelta(
         years=years,
         minutes=minutes,
         weeks=weeks,
@@ -89,6 +77,16 @@ def get_duration(time_from, duration_exp, env_key=None):
         seconds=seconds,
         microseconds=(milliseconds * 1000),
     )
+    return delta
+
+
+def get_future_time_delta(time_from, delta):
+    up_to = time_from + delta
+    return up_to
+
+
+def get_past_time_delta(time_from, delta):
+    up_to = time_from - delta
     return up_to
 
 
