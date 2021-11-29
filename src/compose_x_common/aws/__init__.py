@@ -58,3 +58,26 @@ def get_assume_role_session(session, arn, session_name=None, region=None):
         aws_session_token=creds["Credentials"]["SessionToken"],
         aws_secret_access_key=creds["Credentials"]["SecretAccessKey"],
     )
+
+
+def get_region_azs(session):
+    """Function to return the AZ from a given region. Uses default region for this
+
+    :param boto3.session.Session session: Boto3 session
+
+    :return: list of AZs in the given region
+    :rtype: list
+    """
+    return session.client("ec2").describe_availability_zones()["AvailabilityZones"]
+
+
+def get_account_id(session):
+    """
+    Function to get the current session account ID
+
+    :param boto3.session.Session session: Boto3 Session to make the API call.
+
+    :return: account ID
+    :rtype: str
+    """
+    return session.client("sts").get_caller_identity()["Account"]

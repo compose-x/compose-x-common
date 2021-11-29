@@ -2,19 +2,17 @@
     "status_code": 200,
     "data": {
         "clusterArns": [
-            "arn:aws:ecs:eu-west-1:000000000000:cluster/test",
-            "arn:aws:ecs:eu-west-1:000000000000:cluster/ANewCluster",
-            "arn:aws:ecs:eu-west-1:000000000000:cluster/testing",
-            "arn:aws:ecs:eu-west-1:000000000000:cluster/default"
+            "arn:aws:ecs:eu-west-1:000000000000:cluster/test"
         ],
+        "nextToken": "czc6",
         "ResponseMetadata": {
-            "RequestId": "5e942502-e02f-4553-92cb-5c4081102d22",
+            "RequestId": "8311b97b-a924-477f-8e74-797c6a0c7f34",
             "HTTPStatusCode": 200,
             "HTTPHeaders": {
-                "x-amzn-requestid": "5e942502-e02f-4553-92cb-5c4081102d22",
+                "x-amzn-requestid": "8311b97b-a924-477f-8e74-797c6a0c7f34",
                 "content-type": "application/x-amz-json-1.1",
-                "content-length": "230",
-                "date": "Sat, 20 Nov 2021 12:44:48 GMT"
+                "content-length": "86",
+                "date": "Mon, 29 Nov 2021 12:14:26 GMT"
             },
             "RetryAttempts": 0
         }

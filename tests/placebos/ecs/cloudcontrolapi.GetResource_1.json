@@ -1,0 +1,21 @@
+{
+    "status_code": 200,
+    "data": {
+        "TypeName": "AWS::ECS::Cluster",
+        "ResourceDescription": {
+            "Identifier": "default",
+            "Properties": "{\"ClusterSettings\":[{\"Value\":\"enabled\",\"Name\":\"containerInsights\"}],\"DefaultCapacityProviderStrategy\":[],\"CapacityProviders\":[],\"ClusterName\":\"default\",\"Arn\":\"arn:aws:ecs:eu-west-1:000000000000:cluster/default\",\"Tags\":[]}"
+        },
+        "ResponseMetadata": {
+            "RequestId": "2684c356-e7df-4982-9afc-6c1f618dfd60",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "2684c356-e7df-4982-9afc-6c1f618dfd60",
+                "date": "Mon, 29 Nov 2021 12:14:28 GMT",
+                "content-type": "application/x-amz-json-1.0",
+                "content-length": "340"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

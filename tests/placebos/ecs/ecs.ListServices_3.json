@@ -1,0 +1,20 @@
+{
+    "status_code": 200,
+    "data": {
+        "serviceArns": [
+            "arn:aws:ecs:eu-west-1:000000000000:service/stg/kafka-dmz-services-stg-connect-K1YLJDTNR6TL-EcsServiceDefinition-2UxkibsfzbGp"
+        ],
+        "nextToken": "YWY1NDUwOTYtMDRmNy00YjhiLTg4NTItMjliNTZiZjk4MmFj",
+        "ResponseMetadata": {
+            "RequestId": "1b04ac07-052b-4fba-8f56-aa181d4a6cd3",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "1b04ac07-052b-4fba-8f56-aa181d4a6cd3",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "213",
+                "date": "Mon, 29 Nov 2021 12:14:34 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

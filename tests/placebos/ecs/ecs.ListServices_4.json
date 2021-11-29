@@ -1,0 +1,19 @@
+{
+    "status_code": 200,
+    "data": {
+        "serviceArns": [
+            "arn:aws:ecs:eu-west-1:000000000000:service/stg/kafka-confluent-apps-stg-sccesrreplica-5B3UHGTV94R0-EcsServiceDefinition-Bj9fvtjGlW9G"
+        ],
+        "ResponseMetadata": {
+            "RequestId": "6ba473fc-8cd7-417c-90d5-6bb2a7031ed5",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "6ba473fc-8cd7-417c-90d5-6bb2a7031ed5",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "152",
+                "date": "Mon, 29 Nov 2021 12:14:34 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

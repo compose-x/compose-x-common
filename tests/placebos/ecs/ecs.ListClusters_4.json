@@ -1,0 +1,19 @@
+{
+    "status_code": 200,
+    "data": {
+        "clusterArns": [
+            "arn:aws:ecs:eu-west-1:000000000000:cluster/default"
+        ],
+        "ResponseMetadata": {
+            "RequestId": "712af0e5-df41-462b-92d7-9d2de10cce8c",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "712af0e5-df41-462b-92d7-9d2de10cce8c",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "70",
+                "date": "Mon, 29 Nov 2021 12:14:27 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}
