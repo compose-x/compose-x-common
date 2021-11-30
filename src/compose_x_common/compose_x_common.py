@@ -9,9 +9,9 @@ Main module.
 
 import itertools
 import re
-import warnings
 
 from dateutil.relativedelta import relativedelta
+from flatdict import FlatDict, FlatterDict
 
 DURATIONS_RE = re.compile(
     r"(((?P<y>[0-9]+)y)?((?P<w>[0-9]+)w)?((?P<d>[0-9]+)d)?((?P<h>[0-9]+)h)"
@@ -31,7 +31,7 @@ def keyisset(key, y):
     :returns: True/False
     :rtype: bool
     """
-    if isinstance(y, dict) and key in y.keys() and y[key]:
+    if isinstance(y, (FlatterDict, FlatDict, dict)) and key in y.keys() and y[key]:
         return True
     return False
 
@@ -48,7 +48,7 @@ def keypresent(key, y):
     :returns: True/False
     :rtype: bool
     """
-    if isinstance(y, dict) and key in y.keys():
+    if isinstance(y, (FlatterDict, FlatDict, dict)) and key in y.keys():
         return True
     return False
 
@@ -105,3 +105,22 @@ def chunked_iterable(iterable, size):
         if not chunk:
             break
         yield chunk
+
+
+def attributes_to_mapping(input_obj, mapping, separator=None):
+    """
+    Simple function returning all the
+    :param dict input_obj:
+    :param dict mapping:
+    :param separator: The separator for nested properties of mapping. Defaults to '::'
+    :return:
+    """
+    if separator is None:
+        separator = "::"
+    flat = FlatterDict(input_obj)
+    flat.set_delimiter(separator)
+    result = {}
+    for key, attr in mapping.items():
+        if keypresent(attr, flat) and not isinstance(flat[attr], list):
+            result[key] = flat[attr]
+    return result

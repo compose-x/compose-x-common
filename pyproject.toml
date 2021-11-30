@@ -29,6 +29,7 @@ readme = "README.rst"
 [tool.poetry.dependencies]
 python = "^3.7"
 boto3 = "^1.18"
+flatdict = "^4.0.1"
 
 [tool.poetry.extras]
 aws = ["boto3"]
