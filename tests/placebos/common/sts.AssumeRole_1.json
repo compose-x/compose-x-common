@@ -2,9 +2,9 @@
     "status_code": 200,
     "data": {
         "Credentials": {
-            "AccessKeyId": "ASIA26PTZONEREDACTED123",
-            "SecretAccessKey": "65c3K/AfWHBjVdpJz39O54iCW/PKcBsZONEREDACTED123mk631bY",
-            "SessionToken": "FwoGZONEREDACTED123vYXdzECMaDNajHctXHxFEW+0QByKxAa+6ck/q40xsrfxRakj/ZONEREDACTED123qgEQcuvqe3NoKeVaxzoNP0T4UhGiomF16Y7/nVICoVJH7MUoGBBxH/gzCWxsKnfXrbnqfuz5MD3h4T6SXMJOcMv4FXVXPFZvGohTL+3ka7xnSbmgBnUMWxelYYL/UqhI4J9Owii3lvaNlTwwGrgpx+aTYNhPufmY5ACxAtRhX1qgZ//rmn2Kne6yBgQD/E+jbf/djRKg/g1LZcN7fVqXNtXijHqJSNBjItNBp+3yzunigGuh906M8skVGMO6K31R5wJOKNuLl5d6o2+3e40ZONEREDACTED123qfbOhmFD",
+            "AccessKeyId": "REDACTEDZONEREDACTED123",
+            "SecretAccessKey": "REDACTEDWHBjVdpJz39O54iCW/PKcBsZONEREDACTED123mk631bY",
+            "SessionToken": "REDACTEDREDACTED123vYXdzECMaDNajHctXHxFEW+0QByKxAa+6ck/q40xsrfxRakj/ZONEREDACTED123qgEQcuvqe3NoKeVaxzoNP0T4UhGiomF16Y7/nVICoVJH7MUoGBBxH/gzCWxsKnfXrbnqfuz5MD3h4T6SXMJOcMv4FXVXPFZvGohTL+3ka7xnSbmgBnUMWxelYYL/UqhI4J9Owii3lvaNlTwwGrgpx+aTYNhPufmY5ACxAtRhX1qgZ//rmn2Kne6yBgQD/E+jbf/djRKg/g1LZcN7fVqXNtXijHqJSNBjItNBp+3yzunigGuh906M8skVGMO6K31R5wJOKNuLl5d6o2+3e40ZONEREDACTED123qfbOhmFD",
             "Expiration": {
                 "__class__": "datetime",
                 "year": 2021,
