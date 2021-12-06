@@ -5,5 +5,5 @@
 import re
 
 SSM_PARAMETER_ARN_RE = re.compile(
-    r"^arn:aws(?:-[a-z]+)?:ssm:[\S]+:[0-9]+:parameter(?P<id>/[\S]+)$"
+    r"^arn:aws(?:-[a-z]+)?:ssm:[\S]+:(?P<accountid>[0-9]{12}):parameter(?P<id>/[\S]+)$"
 )

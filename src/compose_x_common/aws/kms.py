@@ -12,10 +12,11 @@ from compose_x_common.compose_x_common import keyisset
 from . import get_session
 
 KMS_KEY_ARN_RE = re.compile(
-    r"(?:^arn:aws(?:-[a-z]+)?:kms:[\S]+:\d{12}:key/)(?P<key_id>[a-zA-Z0-9]{8}(?:-[a-zA-Z0-9]{4}){3}-[a-zA-Z0-9]{12})$"
+    r"(?:^arn:aws(?:-[a-z]+)?:kms:[\S]+:(?P<accountid>\d{12}):key/)"
+    r"(?P<id>[a-zA-Z0-9]{8}(?:-[a-zA-Z0-9]{4}){3}-[a-zA-Z0-9]{12})$"
 )
 KMS_ALIAS_ARN_RE = re.compile(
-    r"(?:^arn:aws(?:-[a-z]+)?:kms:[\S]+:[0-9]+:)(?P<key_alias>alias/(?:[\S]+))$"
+    r"(?:^arn:aws(?:-[a-z]+)?:kms:[\S]+:(?P<accountid>[0-9]{12}):)(?P<id>alias/(?:[\S]+))$"
 )
 
 
