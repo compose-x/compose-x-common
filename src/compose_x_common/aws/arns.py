@@ -9,6 +9,7 @@ from .dynamodb import TABLE_ARN_RE
 from .elasticache import CACHE_CLUSTER_ARN_RE
 from .kinesis import KINESIS_STREAM_ARN_RE
 from .kms import KMS_ALIAS_ARN_RE, KMS_KEY_ARN_RE
+from .neptune import NEPTUNE_DB_CLUSTER_ARN_RE
 from .opensearch import OS_DOMAIN_ARN_RE
 from .rds import RDS_DB_CLUSTER_ARN_RE, RDS_DB_INSTANCE_ARN_RE
 from .s3 import S3_BUCKET_ARN_RE
@@ -38,6 +39,7 @@ ARNS_PER_CFN_TYPE = {
     "AWS::CertificateManager::Certificate": ACM_ARN_RE,
     "AWS::Cognito::UserPool": USER_POOL_RE,
     "AWS::ElastiCache::CacheCluster": CACHE_CLUSTER_ARN_RE,
+    "AWS::Neptune::DBCluster": NEPTUNE_DB_CLUSTER_ARN_RE,
 }
 
 ARNS_PER_TAGGINGAPI_TYPE = {
