@@ -7,6 +7,7 @@ AWS Useful functions
 """
 import json
 import re
+from copy import deepcopy
 
 from boto3.session import Session
 
@@ -40,7 +41,7 @@ def validate_iam_role_arn(arn):
     return arn_valid.match(arn)
 
 
-def get_assume_role_session(session, arn, session_name=None, region=None):
+def get_assume_role_session(session, arn, session_name=None, region=None, **kwargs):
     """
     Function to override ComposeXSettings session to specific session for Lookup
 
@@ -51,14 +52,13 @@ def get_assume_role_session(session, arn, session_name=None, region=None):
     :return: boto3 session from lookup settings
     :rtype: boto3.session.Session
     """
-    if not session_name:
-        session_name = "stsAssumeRole"
+    args = deepcopy(kwargs)
+    if not session_name or "RoleSessionName" not in kwargs.keys():
+        args["RoleSessionName"] = "stsAssumeRole"
+    args["RoleArn"] = arn
+    args["DurationSeconds"] = 300
     validate_iam_role_arn(arn)
-    creds = session.client("sts").assume_role(
-        RoleArn=arn,
-        RoleSessionName=session_name,
-        DurationSeconds=900,
-    )
+    creds = session.client("sts").assume_role(**args)
 
     return Session(
         region_name=region,
