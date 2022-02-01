@@ -53,6 +53,22 @@ def keypresent(key, y):
     return False
 
 
+def set_else_none(key, props, alt_value=None, eval_bool=False):
+    """
+    Function to serialize if not keyisset () set other value
+
+    :param str key:
+    :param dict props:
+    :param alt_value:
+    :param bool eval_bool: Allows to gets booleans properties
+    :return:
+    """
+    if not eval_bool:
+        return alt_value if not keyisset(key, props) else props[key]
+    elif eval_bool:
+        return alt_value if not keypresent(key, props) else props[key]
+
+
 def get_duration(duration_exp):
     """
     Function to define the time delta

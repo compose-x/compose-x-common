@@ -11,6 +11,8 @@ from copy import deepcopy
 
 from boto3.session import Session
 
+from ..compose_x_common import set_else_none
+
 
 def get_session(session=None):
     """
@@ -56,7 +58,7 @@ def get_assume_role_session(session, arn, session_name=None, region=None, **kwar
     if not session_name or "RoleSessionName" not in kwargs.keys():
         args["RoleSessionName"] = "stsAssumeRole"
     args["RoleArn"] = arn
-    args["DurationSeconds"] = 300
+    args["DurationSeconds"] = set_else_none("DurationSeconds", kwargs, alt_value=900)
     validate_iam_role_arn(arn)
     creds = session.client("sts").assume_role(**args)
 
