@@ -3,6 +3,7 @@
 #  Copyright 2020-2021 John Mille <john@compose-x.io>
 
 from .acm import ACM_ARN_RE
+from .cloudmap import NAMESPACE_ARN_RE
 from .codeguru_profiler import PROFILER_ARN_RE
 from .cognito_userpool import USER_POOL_RE
 from .dynamodb import TABLE_ARN_RE
@@ -40,6 +41,9 @@ ARNS_PER_CFN_TYPE = {
     "AWS::Cognito::UserPool": USER_POOL_RE,
     "AWS::ElastiCache::CacheCluster": CACHE_CLUSTER_ARN_RE,
     "AWS::Neptune::DBCluster": NEPTUNE_DB_CLUSTER_ARN_RE,
+    "AWS::ServiceDiscovery::PrivateDnsNamespace": NAMESPACE_ARN_RE,
+    "AWS::ServiceDiscovery::PublicDnsNamespace": NAMESPACE_ARN_RE,
+    "AWS::ServiceDiscovery::HttpNamespace": NAMESPACE_ARN_RE,
 }
 
 ARNS_PER_TAGGINGAPI_TYPE = {

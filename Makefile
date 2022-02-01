@@ -89,7 +89,7 @@ dist: clean ## builds source and wheel package
 	ls -l dist
 
 install: clean ## install the package to the active Python's site-packages
-	pip install . --use-pep517 --use-feature=in-tree-build
+	pip install . --use-pep517 || poetry install
 
 
 conform	: ## Conform to a standard of coding syntax
