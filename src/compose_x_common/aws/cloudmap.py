@@ -4,7 +4,7 @@
 import re
 
 NAMESPACE_ARN_RE = re.compile(
-    r"^arn:aws(?:-[a-z]+)?:servicediscovery:(?P<region>[\S]+):(?P<accountid>[\d]{12})"
+    r"^arn:aws(?:-[a-z]+)?:servicediscovery:(?P<region>[\S]+-[0-9]):(?P<accountid>[\d]{12})"
     r":namespace/(?P<id>ns-[a-zA-Z0-9]+)$"
 )
 
