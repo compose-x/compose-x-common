@@ -4,9 +4,7 @@
 
 from copy import deepcopy
 
-from boto3.session import Session
-
-from compose_x_common.compose_x_common import keyisset
+from compose_x_common.compose_x_common import keyisset, set_else_none
 
 from . import get_session
 
@@ -28,18 +26,23 @@ def list_all_scalable_targets(
     session = get_session(session)
     client = session.client("application-autoscaling")
     args = deepcopy(kwargs)
-    if not namespace and not keyisset("ServiceNamespace", args):
+    namespace = set_else_none("ServiceNamespace", kwargs, namespace)
+    if namespace is None:
         raise KeyError(
             "ServiceNamespace must be set either via `namespace` or `kwargs['ServiceNamespace']`"
         )
-    if not keyisset("ServiceNamespace", args):
-        args["ServiceNamespace"] = namespace
+    args["ServiceNamespace"] = namespace
     if next_token:
         args["NextToken"] = next_token
     targets_r = client.describe_scalable_targets(**args)
-    if keyisset("NextToken", targets_r):
-        return list_all_scalable_targets(
-            targets, targets_r["NextToken"], session, **args
-        )
     targets += targets_r["ScalableTargets"]
+    if keyisset("NextToken", targets_r):
+        args.update({"NextToken": targets_r["NextToken"]})
+        return list_all_scalable_targets(
+            namespace,
+            targets=targets,
+            next_token=targets_r["NextToken"],
+            session=session,
+            **args
+        )
     return targets
