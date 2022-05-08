@@ -8,7 +8,7 @@ from .codeguru_profiler import PROFILER_ARN_RE
 from .cognito_userpool import USER_POOL_RE
 from .dynamodb import TABLE_ARN_RE
 from .elasticache import CACHE_CLUSTER_ARN_RE
-from .kinesis import KINESIS_STREAM_ARN_RE
+from .kinesis import KINESIS_FIREHOSE_ARN_RE, KINESIS_STREAM_ARN_RE
 from .kms import KMS_ALIAS_ARN_RE, KMS_KEY_ARN_RE
 from .neptune import NEPTUNE_DB_CLUSTER_ARN_RE
 from .opensearch import OS_DOMAIN_ARN_RE
@@ -44,6 +44,7 @@ ARNS_PER_CFN_TYPE = {
     "AWS::ServiceDiscovery::PrivateDnsNamespace": NAMESPACE_ARN_RE,
     "AWS::ServiceDiscovery::PublicDnsNamespace": NAMESPACE_ARN_RE,
     "AWS::ServiceDiscovery::HttpNamespace": NAMESPACE_ARN_RE,
+    "AWS::KinesisFirehose::DeliveryStream": KINESIS_FIREHOSE_ARN_RE,
 }
 
 ARNS_PER_TAGGINGAPI_TYPE = {
@@ -65,4 +66,5 @@ ARNS_PER_TAGGINGAPI_TYPE = {
     "acm:certificate": ACM_ARN_RE,
     "cognito-idp": USER_POOL_RE,
     "elasticache:cluster": CACHE_CLUSTER_ARN_RE,
+    "firehose:deliverystream": KINESIS_FIREHOSE_ARN_RE,
 }
