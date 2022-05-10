@@ -1,0 +1,39 @@
+{
+    "status_code": 200,
+    "data": {
+        "imageIds": [
+            {
+                "imageDigest": "sha256:30f431b438f4be517331301e669adce64fa45bfd64137c5a91ca4c630ee90b80",
+                "imageTag": "release-d2a6ec3"
+            },
+            {
+                "imageDigest": "sha256:8d7c023d33fb6e5f9a61c7b72bcf035e9fcfc3e492c8c1f9f4445842c259beaa",
+                "imageTag": "release-01333cc"
+            },
+            {
+                "imageDigest": "sha256:b32b59e5890bba2d1fd95b3238c682c0e92f79d167d9098ddb41715779fb1954",
+                "imageTag": "release-c814e57"
+            },
+            {
+                "imageDigest": "sha256:6ed35f0442b77eceeb45d0538083c6fab47700b7fb294ea2d7ad77c02fd5e925",
+                "imageTag": "8b9531e"
+            },
+            {
+                "imageDigest": "sha256:ae5ee2bbfd23ed686857f42926e22d79cc17e43d5320788276db48f0880bb724",
+                "imageTag": "release-928ee32"
+            }
+        ],
+        "nextToken": "ukD72mdD/mC8b5xV3susmJzzaTgp3hKwR9nRUW1yZZ5QwdTukXGbXwHPAU2OlP86SJyXMT8pG4qYakW3ay2U+VJlxYgcHSsLqCEc8t4HUSmOoldEmVa6n9tG88nfx8J3okwaxrNEHaEf2f04pVvtIXDzf+UeJm0NzEj0ly8U3wR+KIY0nz8iaq3Swfe5Q8/ZO2lwFhfuB1mTOnFP+XxsTm6YCE4gZKiID19agdSCiChQwOvB436U9ICWJchrf2IjofDzmZ14i87/nqv2VLXDYfxKTYN3R7nWoufQN3o5s5Ckp6w8T6IEzgRsT9e0l0PFuWyI/Tu6ifXp5BBTgnbKL9uKg0vLdHmM6iftfrVhsgY6rKtZbcXwxlJb3a7FMMdm",
+        "ResponseMetadata": {
+            "RequestId": "e316cf31-9987-4224-b6fd-4a2429de5811",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "e316cf31-9987-4224-b6fd-4a2429de5811",
+                "date": "Tue, 10 May 2022 22:50:32 GMT",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "1000"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

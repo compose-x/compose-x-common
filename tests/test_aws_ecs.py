@@ -1,4 +1,3 @@
-#    -*- coding: utf-8 -*-
 #  SPDX-License-Identifier: MPL-2.0
 #  Copyright 2020-2021 John Mille <john@compose-x.io>
 
@@ -26,7 +25,6 @@ def test_list_clusters():
     # pill.record()
     pill.playback()
     clusters = list_all_ecs_clusters(session=ecs_test_session, maxResults=1)
-    print(clusters)
     clusters_def = describe_all_ecs_clusters(clusters, session=ecs_test_session)
     clusters_def = describe_all_ecs_clusters(
         clusters, return_as_map=True, session=ecs_test_session
@@ -50,11 +48,9 @@ def test_list_services():
     clusters = list_all_ecs_clusters(session=ecs_test_session)
     cluster_name = CLUSTER_NAME_FROM_ARN.match(clusters[0]).group("name")
     services = list_all_services(cluster_name, session=ecs_test_session, maxResults=1)
-    print(services)
     services_def = describe_all_services(
         services, cluster_name, session=ecs_test_session
     )
-    print(services_def)
 
 
 def test_list_no_services():
@@ -69,4 +65,3 @@ def test_list_no_services():
         return_as_map=True,
         session=ecs_test_session,
     )
-    print(services_def)

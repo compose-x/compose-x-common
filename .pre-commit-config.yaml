@@ -4,6 +4,23 @@ repos:
     hooks:
       - id: end-of-file-fixer
       - id: trailing-whitespace
+      - id: check-case-conflict
+      - id: check-json
+      - id: check-yaml
+      - id: check-toml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+      - id: detect-aws-credentials
+      - id: detect-private-key
+      - id: fix-byte-order-marker
+
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.32.1
+    hooks:
+      - id: pyupgrade
+        args: [ "--py38-plus" ]
+
   - repo: https://github.com/psf/black
     rev: 22.3.0
     hooks:

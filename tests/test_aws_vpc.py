@@ -1,4 +1,3 @@
-#    -*- coding: utf-8 -*-
 #  SPDX-License-Identifier: MPL-2.0
 #  Copyright 2020-2021 John Mille <john@compose-x.io>
 
@@ -29,7 +28,6 @@ def test_get_vpcs():
     pill.playback()
     list_all_vpcs()
     vpc_def = get_all_vpcs_from_ccapi(session=test_session)
-    print(vpc_def)
 
 
 def test_get_subnets():
@@ -39,7 +37,6 @@ def test_get_subnets():
     pill.playback()
     list_all_subnets()
     vpc_def = get_all_subnets_from_ccapi(session=test_session)
-    print(vpc_def)
 
 
 def test_find_from_tags():
@@ -52,7 +49,5 @@ def test_find_from_tags():
     vpc_arns = find_aws_resource_arn_from_tags_api(
         "ec2:vpc", tags, session=test_session
     )
-    print(vpc_arns)
     vpc_ids = [VPC_ARN_RE.match(arn).group("id") for arn in vpc_arns]
     vpc_def = get_all_vpcs_from_ccapi(vpc_ids, session=test_session)
-    print(vpc_def)

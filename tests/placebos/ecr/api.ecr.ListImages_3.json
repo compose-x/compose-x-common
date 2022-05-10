@@ -1,0 +1,22 @@
+{
+    "status_code": 200,
+    "data": {
+        "imageIds": [
+            {
+                "imageDigest": "sha256:72b7b05aa52b0be589bfd96f90df9f438272cfdb1649819524fc2ad642d36a95",
+                "imageTag": "release-bbb50ac"
+            }
+        ],
+        "ResponseMetadata": {
+            "RequestId": "66d9c074-50af-4de6-b3f9-8b3be0b0ac05",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "66d9c074-50af-4de6-b3f9-8b3be0b0ac05",
+                "date": "Tue, 10 May 2022 22:50:32 GMT",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "133"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

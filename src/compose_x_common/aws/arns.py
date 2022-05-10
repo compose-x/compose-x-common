@@ -1,6 +1,6 @@
-﻿#   -*- coding: utf-8 -*-
-#  SPDX-License-Identifier: MPL-2.0
-#  Copyright 2020-2021 John Mille <john@compose-x.io>
+# SPDX-License-Identifier: MPL-2.0
+# Copyright 2020-2021 John Mille <john@compose-x.io>
+
 
 from .acm import ACM_ARN_RE
 from .cloudmap import NAMESPACE_ARN_RE

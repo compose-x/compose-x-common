@@ -1,0 +1,62 @@
+{
+    "status_code": 200,
+    "data": {
+        "imageIds": [
+            {
+                "imageDigest": "sha256:30f431b438f4be517331301e669adce64fa45bfd64137c5a91ca4c630ee90b80",
+                "imageTag": "release-d2a6ec3"
+            },
+            {
+                "imageDigest": "sha256:8d7c023d33fb6e5f9a61c7b72bcf035e9fcfc3e492c8c1f9f4445842c259beaa",
+                "imageTag": "release-01333cc"
+            },
+            {
+                "imageDigest": "sha256:b32b59e5890bba2d1fd95b3238c682c0e92f79d167d9098ddb41715779fb1954",
+                "imageTag": "release-c814e57"
+            },
+            {
+                "imageDigest": "sha256:6ed35f0442b77eceeb45d0538083c6fab47700b7fb294ea2d7ad77c02fd5e925",
+                "imageTag": "8b9531e"
+            },
+            {
+                "imageDigest": "sha256:ae5ee2bbfd23ed686857f42926e22d79cc17e43d5320788276db48f0880bb724",
+                "imageTag": "release-928ee32"
+            },
+            {
+                "imageDigest": "sha256:42b8dfbfe9e0f5186d910756c679ea4d3efc0cde107b9aa22572dd8fe5ee9c70",
+                "imageTag": "release-f68359a"
+            },
+            {
+                "imageDigest": "sha256:4057f93058302f2751801fdf8e715fd7b4830eb8dff0b3b2f75c53360f46ad79",
+                "imageTag": "release-bd50782"
+            },
+            {
+                "imageDigest": "sha256:bc831f9fc40abcef228568b44397dbc39a1a66051a0beca2b3302b3cff355051",
+                "imageTag": "release-eaccd5d"
+            },
+            {
+                "imageDigest": "sha256:ac8f7e14797b74d858668422001834f0f6f5b3d4d1e6b8455bd9079361ec75fb",
+                "imageTag": "release-9435267"
+            },
+            {
+                "imageDigest": "sha256:366dca2ac784f28c4ec2ca1cdfd3fa44f2b227218bc71212378821edcf106174",
+                "imageTag": "release-a4e48a0"
+            },
+            {
+                "imageDigest": "sha256:72b7b05aa52b0be589bfd96f90df9f438272cfdb1649819524fc2ad642d36a95",
+                "imageTag": "release-bbb50ac"
+            }
+        ],
+        "ResponseMetadata": {
+            "RequestId": "2ff72168-ca2f-4497-a0d6-30d6367d3d65",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "2ff72168-ca2f-4497-a0d6-30d6367d3d65",
+                "date": "Tue, 10 May 2022 23:00:18 GMT",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "1315"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}
