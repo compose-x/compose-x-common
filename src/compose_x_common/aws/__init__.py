@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MPL-2.0
-# Copyright 2020-2021 John Mille <john@compose-x.io>
+# Copyright 2020-2022 John Mille <john@compose-x.io>
 
 
 """
@@ -12,6 +12,7 @@ from copy import deepcopy
 from boto3.session import Session
 
 from ..compose_x_common import set_else_none
+from .iam import IAM_ROLE_ARN_RE
 
 
 def get_session(session=None):
@@ -27,20 +28,22 @@ def get_session(session=None):
     return session
 
 
-def validate_iam_role_arn(arn):
+def validate_iam_role_arn(arn: str, as_str: bool = False):
     """
     Function to validate IAM ROLE ARN format
     :param str arn:
     :return: resource match
     :rtype: re.match
     """
-    arn_valid = re.compile(r"^arn:aws(?:-[a-z]+)?:iam::[0-9]{12}:role/[\S]+$")
-    if not arn_valid.match(arn):
+    match = IAM_ROLE_ARN_RE.match(arn)
+    if not match:
         raise ValueError(
             "The role ARN needs to be a valid ARN of format",
-            arn_valid.pattern,
+            IAM_ROLE_ARN_RE.pattern,
         )
-    return arn_valid.match(arn)
+    if as_str:
+        return arn
+    return match
 
 
 def get_assume_role_session(session, arn, session_name=None, region=None, **kwargs):

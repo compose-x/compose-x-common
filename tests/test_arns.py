@@ -9,6 +9,7 @@ from compose_x_common.aws.arns import ARNS_PER_CFN_TYPE
 @pytest.fixture
 def valid_arns():
     return {
+        "AWS::IAM::Role": "arn:aws:iam::965889391954:role/build-docker-python-CodeBuildRole",
         "AWS::EC2::VPC": "arn:aws:ec2:eu-west-1:123456789010:vpc/vpc-abcd1234",
         "AWS::EC2::Subnet": "arn:aws:ec2:eu-west-1:123456789010:subnet/subnet-abcd1234",
         "AWS::SQS::Queue": "arn:aws:sqs:eu-west-1:123456789010:abcd",

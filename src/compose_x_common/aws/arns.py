@@ -1,6 +1,5 @@
 # SPDX-License-Identifier: MPL-2.0
-# Copyright 2020-2021 John Mille <john@compose-x.io>
-
+# Copyright 2020-2022 John Mille <john@compose-x.io>
 
 from .acm import ACM_ARN_RE
 from .cloudmap import NAMESPACE_ARN_RE
@@ -8,6 +7,7 @@ from .codeguru_profiler import PROFILER_ARN_RE
 from .cognito_userpool import USER_POOL_RE
 from .dynamodb import TABLE_ARN_RE
 from .elasticache import CACHE_CLUSTER_ARN_RE
+from .iam import IAM_ROLE_ARN_RE, IAM_USER_ARN_RE
 from .kinesis import KINESIS_FIREHOSE_ARN_RE, KINESIS_STREAM_ARN_RE
 from .kms import KMS_ALIAS_ARN_RE, KMS_KEY_ARN_RE
 from .neptune import NEPTUNE_DB_CLUSTER_ARN_RE
@@ -21,6 +21,8 @@ from .ssm_parameter import SSM_PARAMETER_ARN_RE
 from .vpc import SUBNET_ARN_RE, VPC_ARN_RE
 
 ARNS_PER_CFN_TYPE = {
+    "AWS::IAM::Role": IAM_ROLE_ARN_RE,
+    "AWS::IAM::User": IAM_USER_ARN_RE,
     "AWS::EC2::VPC": VPC_ARN_RE,
     "AWS::EC2::Subnet": SUBNET_ARN_RE,
     "AWS::SQS::Queue": SQS_QUEUE_ARN_RE,
