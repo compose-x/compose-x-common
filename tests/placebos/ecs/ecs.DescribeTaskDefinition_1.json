@@ -1,0 +1,304 @@
+{
+    "status_code": 200,
+    "data": {
+        "taskDefinition": {
+            "taskDefinitionArn": "arn:aws:ecs:eu-west-1:000000000000:task-definition/app01:74",
+            "containerDefinitions": [
+                {
+                    "name": "rproxy",
+                    "image": "000000000000.dkr.ecr.eu-west-1.amazonaws.com/blog-app-01-rproxy:latest",
+                    "cpu": 256,
+                    "memory": 64,
+                    "memoryReservation": 32,
+                    "links": [],
+                    "portMappings": [
+                        {
+                            "containerPort": 80,
+                            "hostPort": 80,
+                            "protocol": "tcp"
+                        }
+                    ],
+                    "essential": true,
+                    "entryPoint": [],
+                    "command": [],
+                    "environment": [
+                        {
+                            "name": "DATETELLER_BACKEND",
+                            "value": "dateteller.svc.appmesh04.cluster.local"
+                        }
+                    ],
+                    "mountPoints": [],
+                    "volumesFrom": [],
+                    "dependsOn": [
+                        {
+                            "containerName": "app01",
+                            "condition": "START"
+                        },
+                        {
+                            "containerName": "envoy",
+                            "condition": "HEALTHY"
+                        }
+                    ],
+                    "dnsServers": [],
+                    "dnsSearchDomains": [],
+                    "dockerSecurityOptions": [],
+                    "logConfiguration": {
+                        "logDriver": "awslogs",
+                        "options": {
+                            "awslogs-group": "svc/appmesh04/app01",
+                            "awslogs-region": "eu-west-1",
+                            "awslogs-stream-prefix": "rproxy"
+                        }
+                    },
+                    "systemControls": []
+                },
+                {
+                    "name": "app01",
+                    "image": "000000000000.dkr.ecr.eu-west-1.amazonaws.com/blog-app-01:appmesh",
+                    "cpu": 512,
+                    "memory": 128,
+                    "memoryReservation": 64,
+                    "links": [],
+                    "portMappings": [
+                        {
+                            "containerPort": 5000,
+                            "hostPort": 5000,
+                            "protocol": "tcp"
+                        }
+                    ],
+                    "essential": false,
+                    "entryPoint": [],
+                    "command": [],
+                    "environment": [
+                        {
+                            "name": "LOGLEVEL",
+                            "value": "DEBUG"
+                        },
+                        {
+                            "name": "DATETELLER_BACKEND",
+                            "value": "dateteller.svc.appmesh04.cluster.local"
+                        }
+                    ],
+                    "mountPoints": [],
+                    "volumesFrom": [],
+                    "dependsOn": [
+                        {
+                            "containerName": "envoy",
+                            "condition": "HEALTHY"
+                        }
+                    ],
+                    "dnsServers": [],
+                    "dnsSearchDomains": [],
+                    "dockerSecurityOptions": [],
+                    "dockerLabels": {},
+                    "logConfiguration": {
+                        "logDriver": "awslogs",
+                        "options": {
+                            "awslogs-group": "svc/appmesh04/app01",
+                            "awslogs-region": "eu-west-1",
+                            "awslogs-stream-prefix": "app01"
+                        }
+                    },
+                    "systemControls": []
+                },
+                {
+                    "name": "xray-daemon",
+                    "image": "amazon/aws-xray-daemon",
+                    "cpu": 32,
+                    "memory": 256,
+                    "memoryReservation": 256,
+                    "links": [],
+                    "portMappings": [
+                        {
+                            "containerPort": 2000,
+                            "hostPort": 2000,
+                            "protocol": "tcp"
+                        }
+                    ],
+                    "essential": false,
+                    "entryPoint": [],
+                    "command": [],
+                    "environment": [
+                        {
+                            "name": "DATETELLER_BACKEND",
+                            "value": "dateteller.svc.appmesh04.cluster.local"
+                        }
+                    ],
+                    "mountPoints": [],
+                    "volumesFrom": [],
+                    "dependsOn": [
+                        {
+                            "containerName": "envoy",
+                            "condition": "HEALTHY"
+                        }
+                    ],
+                    "dnsServers": [],
+                    "dnsSearchDomains": [],
+                    "dockerSecurityOptions": [],
+                    "dockerLabels": {},
+                    "logConfiguration": {
+                        "logDriver": "awslogs",
+                        "options": {
+                            "awslogs-group": "svc/appmesh04/app01",
+                            "awslogs-region": "eu-west-1",
+                            "awslogs-stream-prefix": "xray-daemon"
+                        }
+                    },
+                    "systemControls": []
+                },
+                {
+                    "name": "envoy",
+                    "image": "840364872350.dkr.ecr.us-west-2.amazonaws.com/aws-appmesh-envoy:v1.12.3.0-prod",
+                    "cpu": 0,
+                    "memory": 500,
+                    "portMappings": [],
+                    "essential": true,
+                    "environment": [
+                        {
+                            "name": "APPMESH_VIRTUAL_NODE_NAME",
+                            "value": "mesh/appmesh04/virtualNode/app01"
+                        }
+                    ],
+                    "mountPoints": [],
+                    "volumesFrom": [],
+                    "user": "1337",
+                    "healthCheck": {
+                        "command": [
+                            "CMD-SHELL",
+                            "curl -s http://localhost:9901/server_info | grep state | grep -q LIVE"
+                        ],
+                        "interval": 5,
+                        "timeout": 2,
+                        "retries": 3,
+                        "startPeriod": 10
+                    }
+                }
+            ],
+            "family": "app01",
+            "taskRoleArn": "arn:aws:iam::000000000000:role/appmesh04-services-1VN8BXQ1S1P5K-app01-EcsTaskRole-1GFZCD40TQ1VD",
+            "executionRoleArn": "arn:aws:iam::000000000000:role/appmesh04-services-1VN8BXQ1S1P5K-EcsExecutionRole-R0HGE6SC0UOS",
+            "networkMode": "awsvpc",
+            "revision": 74,
+            "volumes": [],
+            "status": "ACTIVE",
+            "requiresAttributes": [
+                {
+                    "name": "ecs.capability.execution-role-awslogs"
+                },
+                {
+                    "name": "com.amazonaws.ecs.capability.ecr-auth"
+                },
+                {
+                    "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+                },
+                {
+                    "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+                },
+                {
+                    "name": "com.amazonaws.ecs.capability.task-iam-role"
+                },
+                {
+                    "name": "ecs.capability.aws-appmesh"
+                },
+                {
+                    "name": "ecs.capability.container-health-check"
+                },
+                {
+                    "name": "ecs.capability.execution-role-ecr-pull"
+                },
+                {
+                    "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+                },
+                {
+                    "name": "ecs.capability.task-eni"
+                },
+                {
+                    "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+                },
+                {
+                    "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+                },
+                {
+                    "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+                },
+                {
+                    "name": "ecs.capability.container-ordering"
+                }
+            ],
+            "placementConstraints": [],
+            "compatibilities": [
+                "EC2",
+                "FARGATE"
+            ],
+            "requiresCompatibilities": [
+                "EC2",
+                "FARGATE"
+            ],
+            "cpu": "1024",
+            "memory": "2048",
+            "proxyConfiguration": {
+                "type": "APPMESH",
+                "containerName": "envoy",
+                "properties": [
+                    {
+                        "name": "ProxyIngressPort",
+                        "value": "15000"
+                    },
+                    {
+                        "name": "AppPorts",
+                        "value": "80"
+                    },
+                    {
+                        "name": "EgressIgnoredIPs",
+                        "value": "169.254.170.2,169.254.169.254"
+                    },
+                    {
+                        "name": "IgnoredGID",
+                        "value": ""
+                    },
+                    {
+                        "name": "EgressIgnoredPorts",
+                        "value": ""
+                    },
+                    {
+                        "name": "IgnoredUID",
+                        "value": "1337"
+                    },
+                    {
+                        "name": "ProxyEgressPort",
+                        "value": "15001"
+                    }
+                ]
+            }
+        },
+        "tags": [
+            {
+                "key": "owner",
+                "value": "johnpreston"
+            },
+            {
+                "key": "Environment",
+                "value": "appmesh04-services-1VN8BXQ1S1P5K-app01-1IVVTK7IX51I0"
+            },
+            {
+                "key": "contact",
+                "value": "john@lambda-my-aws.io"
+            },
+            {
+                "key": "Name",
+                "value": "app01"
+            }
+        ],
+        "ResponseMetadata": {
+            "RequestId": "13f91ba9-cf03-4a47-80d3-93149faad5dd",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "13f91ba9-cf03-4a47-80d3-93149faad5dd",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "4593",
+                "date": "Fri, 03 Jun 2022 07:39:03 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

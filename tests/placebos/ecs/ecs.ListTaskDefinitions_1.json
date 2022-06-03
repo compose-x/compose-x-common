@@ -1,0 +1,29 @@
+{
+    "status_code": 200,
+    "data": {
+        "taskDefinitionArns": [
+            "arn:aws:ecs:eu-west-1:000000000000:task-definition/app01:74",
+            "arn:aws:ecs:eu-west-1:000000000000:task-definition/app01:76",
+            "arn:aws:ecs:eu-west-1:000000000000:task-definition/app02:53",
+            "arn:aws:ecs:eu-west-1:000000000000:task-definition/app03:62",
+            "arn:aws:ecs:eu-west-1:000000000000:task-definition/testing:1",
+            "arn:aws:ecs:eu-west-1:000000000000:task-definition/testing:2",
+            "arn:aws:ecs:eu-west-1:000000000000:task-definition/web2:4",
+            "arn:aws:ecs:eu-west-1:000000000000:task-definition/web:8",
+            "arn:aws:ecs:eu-west-1:000000000000:task-definition/web:38",
+            "arn:aws:ecs:eu-west-1:000000000000:task-definition/wordpress:11",
+            "arn:aws:ecs:eu-west-1:000000000000:task-definition/wordpress:13"
+        ],
+        "ResponseMetadata": {
+            "RequestId": "56672715-98b9-4cae-b017-adcc8a607c68",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "56672715-98b9-4cae-b017-adcc8a607c68",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "709",
+                "date": "Fri, 03 Jun 2022 07:39:02 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

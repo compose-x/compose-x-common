@@ -8,9 +8,8 @@ from copy import deepcopy
 import boto3
 from boto3.session import Session
 
+from compose_x_common.aws import get_session
 from compose_x_common.compose_x_common import chunked_iterable, keyisset
-
-from . import get_session
 
 CLUSTER_NAME_FROM_ARN = re.compile(
     r"arn:aws(?:-[a-z-]+)?:ecs:[\S]+:[\d]{12}:cluster/(?P<name>[a-zA-Z0-9-_]+$)"
@@ -169,3 +168,50 @@ def describe_all_services(
             else:
                 services.append(service)
     return services
+
+
+def list_all_task_definitions(definitions=None, next_token=None, ecs_session=None):
+    """
+    Simple recursive function to list all the task definitions into an account+region.
+
+    :param list definitions:
+    :param str next_token:
+    :param boto3.session.Session ecs_session:
+    :return: list of active task definitions
+    :rtype: list
+    """
+    if ecs_session is None:
+        ecs_session = Session()
+    client = ecs_session.client("ecs")
+    if definitions is None:
+        definitions = []
+    if next_token:
+        defs_r = client.list_task_definitions(nextToken=next_token, status="ACTIVE")
+    else:
+        defs_r = client.list_task_definitions(status="ACTIVE")
+    definitions += defs_r["taskDefinitionArns"]
+    if keyisset("nextToken", defs_r):
+        return list_all_task_definitions(definitions, defs_r["nextToken"], ecs_session)
+    return definitions
+
+
+def list_container_definitions_images(task_definition, ecs_session=None):
+    """
+    Simple function to list the images of a given task definition
+
+    :param str task_definition:
+    :param boto3.session.Session ecs_session:
+    :return: list of images
+    :rtype: list
+    """
+    if ecs_session is None:
+        ecs_session = Session()
+    client = ecs_session.client("ecs")
+    task_def = client.describe_task_definition(
+        taskDefinition=task_definition,
+        include=[
+            "TAGS",
+        ],
+    )["taskDefinition"]
+    images = [container["image"] for container in task_def["containerDefinitions"]]
+    return images

@@ -14,6 +14,8 @@ from compose_x_common.aws.ecs import (
     describe_all_services,
     list_all_ecs_clusters,
     list_all_services,
+    list_all_task_definitions,
+    list_container_definitions_images,
 )
 
 HERE = path.abspath(path.dirname(__file__))
@@ -64,4 +66,15 @@ def test_list_no_services():
         services,
         return_as_map=True,
         session=ecs_test_session,
+    )
+
+
+def test_list_all_task_definitions_and_images():
+    ecs_test_session = Session()
+    pill = placebo.attach(ecs_test_session, data_path=f"{HERE}/placebos/ecs/")
+    # pill.record()
+    pill.playback()
+    definitions = list_all_task_definitions(ecs_session=ecs_test_session)
+    images = list_container_definitions_images(
+        task_definition=definitions[0], ecs_session=ecs_test_session
     )

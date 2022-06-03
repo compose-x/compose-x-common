@@ -64,8 +64,7 @@ def get_docker_image_details(
     session: Session = None,
 ):
     """
-    Function to retrive the image information
-    :return:
+    Function to retrieve the image information
     """
     session = get_session(session)
     client = session.client("ecr")
