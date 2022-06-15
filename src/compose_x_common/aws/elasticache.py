@@ -4,5 +4,5 @@
 import re
 
 CACHE_CLUSTER_ARN_RE = re.compile(
-    r"^arn:aws(?:-[a-z]+)?:elasticache:[\w-]+:[0-9]{12}:cluster:(?P<id>[\S]+)$"
+    r"^arn:aws(?:-[a-z]+)?:elasticache:(?P<region>[a-z\d\-]+-\d):(?P<accountid>[\d]{12}):cluster:(?P<id>[\S]+)$"
 )

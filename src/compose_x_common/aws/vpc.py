@@ -9,10 +9,10 @@ from ..compose_x_common import keyisset
 from . import get_account_id, get_resource_from_ccapi, get_session
 
 VPC_ARN_RE = re.compile(
-    r"^arn:aws(?:-[a-z]+)?:ec2:[a-z0-9-]+:[0-9]{12}:vpc/(?P<id>vpc-[a-z0-9]+)$"
+    r"^arn:aws(?:-[a-z]+)?:ec2:(?P<region>[a-z\d\-]+-\d):(?P<accounid>[\d]{12}):vpc/(?P<id>vpc-[a-z\d]+)$"
 )
 SUBNET_ARN_RE = re.compile(
-    r"^arn:aws(?:-[a-z]+)?:ec2:[a-z0-9-]+:[0-9]{12}:subnet/(?P<id>subnet-[a-z0-9]+)$"
+    r"^arn:aws(?:-[a-z]+)?:ec2:(?P<region>[a-z\d\-]+-\d):(?P<accountid>[\d]{12}):subnet/(?P<id>subnet-[a-z\d]+)$"
 )
 
 

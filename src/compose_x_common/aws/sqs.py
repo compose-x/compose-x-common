@@ -4,5 +4,5 @@
 import re
 
 SQS_QUEUE_ARN_RE = re.compile(
-    r"^arn:aws(?:-[a-z]+)?:sqs:(?P<region>[\S]+-[0-9]):(?P<accountid>[0-9]{12}):(?P<id>[\S]+)$"
+    r"^arn:aws(?:-[a-z]+)?:sqs:(?P<region>[a-z\d\-]+-\d):(?P<accountid>[0-9]{12}):(?P<id>[\S]+)$"
 )

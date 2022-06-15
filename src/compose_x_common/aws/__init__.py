@@ -1,21 +1,24 @@
 # SPDX-License-Identifier: MPL-2.0
 # Copyright 2020-2022 John Mille <john@compose-x.io>
 
+from __future__ import annotations
+
+import re
+from typing import Union
 
 """
 AWS Useful functions
 """
 import json
-import re
 from copy import deepcopy
 
 from boto3.session import Session
 
-from ..compose_x_common import set_else_none
-from .iam import IAM_ROLE_ARN_RE
+from compose_x_common.aws.iam import IAM_ROLE_ARN_RE
+from compose_x_common.compose_x_common import set_else_none
 
 
-def get_session(session=None):
+def get_session(session: Session = None) -> Session:
     """
     Simple function to assign a new session when none given
 
@@ -28,10 +31,12 @@ def get_session(session=None):
     return session
 
 
-def validate_iam_role_arn(arn: str, as_str: bool = False):
+def validate_iam_role_arn(arn: str, as_str: bool = False) -> Union[str, re.Match]:
     """
     Function to validate IAM ROLE ARN format
+
     :param str arn:
+    :param bool as_str: returns the role ARN as a string
     :return: resource match
     :rtype: re.match
     """
@@ -46,7 +51,9 @@ def validate_iam_role_arn(arn: str, as_str: bool = False):
     return match
 
 
-def get_assume_role_session(session, arn, session_name=None, region=None, **kwargs):
+def get_assume_role_session(
+    session: Session, arn: str, session_name: str = None, region: str = None, **kwargs
+) -> Session:
     """
     Function to override ComposeXSettings session to specific session for Lookup
 
@@ -73,7 +80,9 @@ def get_assume_role_session(session, arn, session_name=None, region=None, **kwar
     )
 
 
-def get_resource_from_ccapi(type_name: str, identifier, session=None, **kwargs):
+def get_resource_from_ccapi(
+    type_name: str, identifier: Union[str, dict], session: Session = None, **kwargs
+) -> dict:
     """
     Wrapper around cloudcontrol.get_resource
 
@@ -92,7 +101,7 @@ def get_resource_from_ccapi(type_name: str, identifier, session=None, **kwargs):
     return resource_properties
 
 
-def get_region_azs(session=None):
+def get_region_azs(session: Session = None) -> list:
     """Function to return the AZ from a given region. Uses default region for this
 
     :param boto3.session.Session session: Boto3 session
@@ -104,7 +113,7 @@ def get_region_azs(session=None):
     return session.client("ec2").describe_availability_zones()["AvailabilityZones"]
 
 
-def get_account_id(session=None):
+def get_account_id(session: Session = None) -> str:
     """
     Function to get the current session account ID
 

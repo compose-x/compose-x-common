@@ -5,6 +5,6 @@
 import re
 
 PROFILER_ARN_RE = re.compile(
-    r"^arn:aws(?:-[a-z]+)?:codeguru-profiler:"
-    r"(?P<region>[\S]+):[0-9]{12}:profilingGroup/(?P<id>[\S]+)$"
+    r"^arn:aws(?:-[a-z]+)?:codeguru-profiler:(?P<region>[a-z\d\-]+-\d):(?P<accountid>\d{12}):"
+    r"profilingGroup/(?P<id>\S+)$"
 )

@@ -5,5 +5,5 @@
 import re
 
 TABLE_ARN_RE = re.compile(
-    r"^arn:aws(?:-[a-z]+)?:dynamodb:[\S]+:(?P<accountid>[0-9]{12}):table/(?P<id>[\S]+)$"
+    r"^arn:aws(?:-[a-z]+)?:dynamodb:(?P<region>[a-z\d\-]+-\d):(?P<accountid>[\d]{12}):table/(?P<id>[\S]+)$"
 )

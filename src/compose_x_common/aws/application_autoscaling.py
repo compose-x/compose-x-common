@@ -4,9 +4,8 @@
 
 from copy import deepcopy
 
+from compose_x_common.aws import get_session
 from compose_x_common.compose_x_common import keyisset, set_else_none
-
-from . import get_session
 
 
 def list_all_scalable_targets(

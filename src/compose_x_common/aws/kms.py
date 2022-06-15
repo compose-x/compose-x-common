@@ -5,18 +5,15 @@
 import re
 import warnings
 
-from boto3.session import Session
-
+from compose_x_common.aws import get_session
 from compose_x_common.compose_x_common import keyisset
 
-from . import get_session
-
 KMS_KEY_ARN_RE = re.compile(
-    r"(?:^arn:aws(?:-[a-z]+)?:kms:[\S]+:(?P<accountid>\d{12}):key/)"
-    r"(?P<id>[a-zA-Z0-9]{8}(?:-[a-zA-Z0-9]{4}){3}-[a-zA-Z0-9]{12})$"
+    r"^arn:aws(?:-[a-z]+)?:kms:(?P<region>[a-z\d\-]+-\d):(?P<accountid>\d{12}):key/"
+    r"(?P<id>[a-zA-Z\d]{8}(?:-[a-zA-Z\d]{4}){3}-[a-zA-Z\d]{12})$"
 )
 KMS_ALIAS_ARN_RE = re.compile(
-    r"(?:^arn:aws(?:-[a-z]+)?:kms:[\S]+:(?P<accountid>[0-9]{12}):)(?P<id>alias/(?:[\S]+))$"
+    r"^arn:aws(?:-[a-z]+)?:kms:(?P<region>[a-z\d\-]+-\d):(?P<accountid>[0-9]{12}):(?P<id>alias/[\S]+)$"
 )
 
 

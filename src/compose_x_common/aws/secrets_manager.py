@@ -5,7 +5,8 @@
 import re
 
 SECRET_ARN_RE = re.compile(
-    r"^arn:aws(?:-[a-z]+)?:secretsmanager:[\w-]+:(?P<accountid>[0-9]{12}):secret:(?P<id>[\S]+(?:-[A-Za-z0-9]{6}))$"
+    r"^arn:aws(?:[\w-]+)?:secretsmanager:(?P<region>[a-z\d\-]+-\d):(?P<accountid>[0-9]{12}):"
+    r"secret:(?P<id>[\S]+-[A-Za-z\d]{6})$"
 )
 
 

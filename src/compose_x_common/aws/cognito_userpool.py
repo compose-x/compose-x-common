@@ -5,5 +5,5 @@
 import re
 
 USER_POOL_RE = re.compile(
-    r"^arn:aws(?:-[a-z]+)?:cognito-idp:[\S]+:(?P<accountid>[0-9]{12}):userpool/(?P<id>[\S]+)$"
+    r"^arn:aws(?:-[a-z]+)?:cognito-idp:(?P<region>[a-z\d\-]+-\d):(?P<accountid>[\d]{12}):userpool/(?P<id>[\S]+)$"
 )

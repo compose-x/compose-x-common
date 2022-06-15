@@ -30,11 +30,23 @@ def valid_arns():
         "AWS::ServiceDiscovery::PrivateDnsNamespace": "arn:aws:servicediscovery:eu-west-1:123456789010:namespace/ns-s7wyohfj7m5pfgg7",
         "AWS::ServiceDiscovery::PublicDnsNamespace": "arn:aws:servicediscovery:eu-west-1:123456789010:namespace/ns-s7wyohfj7m5pfgg7",
         "AWS::ServiceDiscovery::HttpNamespace": "arn:aws:servicediscovery:eu-west-1:123456789010:namespace/ns-s7wyohfj7m5pfgg7",
+        "AWS::ECS::Cluster": "arn:aws:ecs:eu-west-1:123456789010:cluster/default",
+        "AWS::KinesisFirehose::DeliveryStream": "arn:aws:firehose:eu-west-1:123456789010:deliverystream/PUT-S3-g6B0t",
     }
 
 
 def test_valid_arns(valid_arns):
     for aws_type, regexp in ARNS_PER_CFN_TYPE.items():
         if aws_type not in valid_arns:
+            print("Untested", aws_type)
             continue
-        assert regexp.match(valid_arns[aws_type]).group("id")
+        groups = regexp.match(valid_arns[aws_type])
+        try:
+            assert groups and groups.group("id")
+        except AssertionError:
+            raise AssertionError(
+                "ARN validation failed for",
+                aws_type,
+                valid_arns[aws_type],
+                regexp.pattern,
+            )

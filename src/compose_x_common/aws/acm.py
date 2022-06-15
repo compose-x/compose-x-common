@@ -4,6 +4,6 @@
 import re
 
 ACM_ARN_RE = re.compile(
-    r"^arn:aws(?:-[a-z]+)?:acm:(?P<region>[\S]+):(?P<accountid>[\d]{12}):certificate/"
-    r"(?P<id>[a-z0-9]{8}(?:-[a-z0-9]{4}){3}-[a-z0-9]{12})$"
+    r"^arn:aws(?:-[a-z]+)?:acm:(?P<region>[a-z\d\-]+-\d):(?P<accountid>\d{12}):"
+    r"certificate/(?P<id>[a-z\d]{8}(?:-[a-z\d]{4}){3}-[a-z\d]{12})$"
 )

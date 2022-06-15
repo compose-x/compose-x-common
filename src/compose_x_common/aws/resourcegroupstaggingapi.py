@@ -1,15 +1,9 @@
 # SPDX-License-Identifier: MPL-2.0
 # Copyright 2020-2022 John Mille <john@compose-x.io>
 
-import re
-import warnings
-from copy import deepcopy
-
-from boto3.session import Session
-
-from ..compose_x_common import keyisset
-from . import get_session
-from .arns import ARNS_PER_TAGGINGAPI_TYPE
+from compose_x_common.aws import get_session
+from compose_x_common.aws.arns import ARNS_PER_TAGGINGAPI_TYPE
+from compose_x_common.compose_x_common import keyisset
 
 
 def get_resources_from_tags(aws_resource_search, search_tags, session=None):

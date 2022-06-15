@@ -1,24 +1,25 @@
 # SPDX-License-Identifier: MPL-2.0
 # Copyright 2020-2022 John Mille <john@compose-x.io>
 
-from .acm import ACM_ARN_RE
-from .cloudmap import NAMESPACE_ARN_RE
-from .codeguru_profiler import PROFILER_ARN_RE
-from .cognito_userpool import USER_POOL_RE
-from .dynamodb import TABLE_ARN_RE
-from .elasticache import CACHE_CLUSTER_ARN_RE
-from .iam import IAM_ROLE_ARN_RE, IAM_USER_ARN_RE
-from .kinesis import KINESIS_FIREHOSE_ARN_RE, KINESIS_STREAM_ARN_RE
-from .kms import KMS_ALIAS_ARN_RE, KMS_KEY_ARN_RE
-from .neptune import NEPTUNE_DB_CLUSTER_ARN_RE
-from .opensearch import OS_DOMAIN_ARN_RE
-from .rds import RDS_DB_CLUSTER_ARN_RE, RDS_DB_INSTANCE_ARN_RE
-from .s3 import S3_BUCKET_ARN_RE
-from .secrets_manager import SECRET_ARN_RE
-from .sns import SNS_TOPIC_ARN_RE
-from .sqs import SQS_QUEUE_ARN_RE
-from .ssm_parameter import SSM_PARAMETER_ARN_RE
-from .vpc import SUBNET_ARN_RE, VPC_ARN_RE
+from compose_x_common.aws.acm import ACM_ARN_RE
+from compose_x_common.aws.cloudmap import NAMESPACE_ARN_RE
+from compose_x_common.aws.codeguru_profiler import PROFILER_ARN_RE
+from compose_x_common.aws.cognito_userpool import USER_POOL_RE
+from compose_x_common.aws.dynamodb import TABLE_ARN_RE
+from compose_x_common.aws.ecs import CLUSTER_ID_ARN_RE
+from compose_x_common.aws.elasticache import CACHE_CLUSTER_ARN_RE
+from compose_x_common.aws.iam import IAM_ROLE_ARN_RE, IAM_USER_ARN_RE
+from compose_x_common.aws.kinesis import KINESIS_FIREHOSE_ARN_RE, KINESIS_STREAM_ARN_RE
+from compose_x_common.aws.kms import KMS_ALIAS_ARN_RE, KMS_KEY_ARN_RE
+from compose_x_common.aws.neptune import NEPTUNE_DB_CLUSTER_ARN_RE
+from compose_x_common.aws.opensearch import OS_DOMAIN_ARN_RE
+from compose_x_common.aws.rds import RDS_DB_CLUSTER_ARN_RE, RDS_DB_INSTANCE_ARN_RE
+from compose_x_common.aws.s3 import S3_BUCKET_ARN_RE
+from compose_x_common.aws.secrets_manager import SECRET_ARN_RE
+from compose_x_common.aws.sns import SNS_TOPIC_ARN_RE
+from compose_x_common.aws.sqs import SQS_QUEUE_ARN_RE
+from compose_x_common.aws.ssm_parameter import SSM_PARAMETER_ARN_RE
+from compose_x_common.aws.vpc import SUBNET_ARN_RE, VPC_ARN_RE
 
 ARNS_PER_CFN_TYPE = {
     "AWS::IAM::Role": IAM_ROLE_ARN_RE,
@@ -47,6 +48,7 @@ ARNS_PER_CFN_TYPE = {
     "AWS::ServiceDiscovery::PublicDnsNamespace": NAMESPACE_ARN_RE,
     "AWS::ServiceDiscovery::HttpNamespace": NAMESPACE_ARN_RE,
     "AWS::KinesisFirehose::DeliveryStream": KINESIS_FIREHOSE_ARN_RE,
+    "AWS::ECS::Cluster": CLUSTER_ID_ARN_RE,
 }
 
 ARNS_PER_TAGGINGAPI_TYPE = {

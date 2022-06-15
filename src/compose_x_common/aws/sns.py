@@ -4,5 +4,5 @@
 import re
 
 SNS_TOPIC_ARN_RE = re.compile(
-    r"^arn:aws(?:-[a-z]+)?:sns:[\S]+:(?P<accountid>[0-9]{12}):(?P<id>[\S]+)$"
+    r"^arn:aws(?:-[a-z\-]+)?:sns:(?P<region>[a-z\d\-]+-\d):(?P<accountid>[0-9]{12}):(?P<id>[\S]+)$"
 )

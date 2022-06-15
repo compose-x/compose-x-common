@@ -12,7 +12,13 @@ from compose_x_common.aws import get_session
 from compose_x_common.compose_x_common import chunked_iterable, keyisset
 
 CLUSTER_NAME_FROM_ARN = re.compile(
-    r"arn:aws(?:-[a-z-]+)?:ecs:[\S]+:[\d]{12}:cluster/(?P<name>[a-zA-Z0-9-_]+$)"
+    r"arn:aws(?:-[a-z-]+)?:ecs:(?P<region>[a-z\d\-]+-\d):(?P<accountid>\d{12}):"
+    r"cluster/(?P<name>\w+)$"
+)
+
+CLUSTER_ID_ARN_RE = re.compile(
+    r"arn:aws(?:-[a-z-]+)?:ecs:(?P<region>[a-z\d\-]+-\d):(?P<accountid>\d{12}):"
+    r"cluster/(?P<id>\w+)$"
 )
 
 
