@@ -1,0 +1,22 @@
+{
+    "status_code": 200,
+    "data": {
+        "CertificateSummaryList": [
+            {
+                "CertificateArn": "arn:aws:acm:eu-west-1:000000000000:certificate/e37707fd-c7e7-4195-a89c-b2bd6e5d18e9",
+                "DomainName": "docs.ecs-composex.bdd-testing.compose-x.io"
+            }
+        ],
+        "ResponseMetadata": {
+            "RequestId": "31b4819d-c5fd-442f-91b4-c4f076976f08",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "31b4819d-c5fd-442f-91b4-c4f076976f08",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "191",
+                "date": "Fri, 22 Jul 2022 00:08:22 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

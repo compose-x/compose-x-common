@@ -1,0 +1,23 @@
+{
+    "status_code": 200,
+    "data": {
+        "NextToken": "L8y8V/UjkjbSQPGKjf5yaPEWngJwWN+yHYYk+5LBN2G8O4VRp+Kw83urf0rMSwyVQlqjy7dhNelKP6JOSnVTNbpCx43HfYRHcI+kcCwRLGsxqRJqfKUvk6o1sJGz2ZdLotLowRDMgaMSftbgIkAGeKTVWlQIunRD0eqrvrYGhc12lwM2AVAQ2QbtUHRSD5gt6eiA8w81D5izah6kYPU//OZR9qoTC7duOTLyY+2SDh2YgL7ggkB4i8dXkwoQsxAf5D9UxDEzQ1UB6AtQSKXGLr7IduPBD0BPD7aP3zgh6NW4diqhCAFqJMImziRqCMPhtT2c8zB3LF9lrb3yANJrcg==",
+        "CertificateSummaryList": [
+            {
+                "CertificateArn": "arn:aws:acm:eu-west-1:000000000000:certificate/6c681176-7705-49c0-8c25-c06ab4fb8c4e",
+                "DomainName": "*.demos.lambda-my-aws.io"
+            }
+        ],
+        "ResponseMetadata": {
+            "RequestId": "086e1537-74d7-4985-b79c-b44d106c9974",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "086e1537-74d7-4985-b79c-b44d106c9974",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "532",
+                "date": "Fri, 22 Jul 2022 00:08:22 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}

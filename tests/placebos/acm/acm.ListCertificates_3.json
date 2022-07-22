@@ -1,0 +1,26 @@
+{
+    "status_code": 200,
+    "data": {
+        "CertificateSummaryList": [
+            {
+                "CertificateArn": "arn:aws:acm:eu-west-1:000000000000:certificate/6c681176-7705-49c0-8c25-c06ab4fb8c4e",
+                "DomainName": "*.demos.lambda-my-aws.io"
+            },
+            {
+                "CertificateArn": "arn:aws:acm:eu-west-1:000000000000:certificate/e37707fd-c7e7-4195-a89c-b2bd6e5d18e9",
+                "DomainName": "docs.ecs-composex.bdd-testing.compose-x.io"
+            }
+        ],
+        "ResponseMetadata": {
+            "RequestId": "bba68581-d430-479c-9ee6-507befb465e5",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "x-amzn-requestid": "bba68581-d430-479c-9ee6-507befb465e5",
+                "content-type": "application/x-amz-json-1.1",
+                "content-length": "336",
+                "date": "Fri, 22 Jul 2022 00:08:22 GMT"
+            },
+            "RetryAttempts": 0
+        }
+    }
+}
