@@ -13,12 +13,12 @@ from compose_x_common.compose_x_common import chunked_iterable, keyisset
 
 CLUSTER_NAME_FROM_ARN = re.compile(
     r"arn:aws(?:-[a-z-]+)?:ecs:(?P<region>[a-z\d\-]+-\d):(?P<accountid>\d{12}):"
-    r"cluster/(?P<name>\w+)$"
+    r"cluster/(?P<name>[\w\-_]+)$"
 )
 
 CLUSTER_ID_ARN_RE = re.compile(
     r"arn:aws(?:-[a-z-]+)?:ecs:(?P<region>[a-z\d\-]+-\d):(?P<accountid>\d{12}):"
-    r"cluster/(?P<id>\w+)$"
+    r"cluster/(?P<id>[\w\-_]+)$"
 )
 
 

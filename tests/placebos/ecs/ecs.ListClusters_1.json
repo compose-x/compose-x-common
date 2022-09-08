@@ -2,7 +2,8 @@
     "status_code": 200,
     "data": {
         "clusterArns": [
-            "arn:aws:ecs:eu-west-1:000000000000:cluster/test"
+            "arn:aws:ecs:eu-west-1:000000000000:cluster/test",
+            "arn:aws:ecs:eu-west-1:000000000000:cluster/test-with_specchar"
         ],
         "nextToken": "czc6",
         "ResponseMetadata": {

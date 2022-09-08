@@ -5,9 +5,11 @@
 Main module.
 """
 
+from __future__ import annotations
 
 import itertools
 import re
+from typing import Any, Union
 
 from dateutil.relativedelta import relativedelta
 from flatdict import FlatDict, FlatterDict
@@ -18,9 +20,9 @@ DURATIONS_RE = re.compile(
 )
 
 
-def keyisset(key, y):
+def keyisset(key, y: Union[dict, FlatDict, FlatterDict]) -> bool:
     """
-    Macro to figure if the the dictionary contains a key and that the key is not empty
+    Macro to figure if the dictionary contains a key and that the key is not empty
 
     :param key: The key to check presence in the dictionary
     :type key: str
@@ -35,9 +37,9 @@ def keyisset(key, y):
     return False
 
 
-def keypresent(key, y):
+def keypresent(key, y: Union[dict, FlatDict, FlatterDict]) -> bool:
     """
-    Macro to figure if the the dictionary contains a key and that the key is not empty
+    Macro to figure if the dictionary contains a key and that the key is not empty
 
     :param key: The key to check presence in the dictionary
     :type key: str
@@ -52,7 +54,12 @@ def keypresent(key, y):
     return False
 
 
-def set_else_none(key, props, alt_value=None, eval_bool=False):
+def set_else_none(
+    key: Any,
+    props: Union[dict, FlatDict, FlatterDict],
+    alt_value: Any = None,
+    eval_bool: bool = False,
+) -> Any:
     """
     Function to serialize if not keyisset () set other value
 
@@ -68,12 +75,9 @@ def set_else_none(key, props, alt_value=None, eval_bool=False):
         return alt_value if not keypresent(key, props) else props[key]
 
 
-def get_duration(duration_exp):
+def get_duration(duration_exp: str) -> relativedelta:
     """
     Function to define the time delta
-
-    :param str duration_exp:
-    :return: timedelta
     """
     parts = DURATIONS_RE.match(duration_exp)
     milliseconds = int(parts.group("ms")) if parts.group("ms") else 0
