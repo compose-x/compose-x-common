@@ -14,6 +14,7 @@ from compose_x_common.aws.kms import KMS_ALIAS_ARN_RE, KMS_KEY_ARN_RE
 from compose_x_common.aws.neptune import NEPTUNE_DB_CLUSTER_ARN_RE
 from compose_x_common.aws.opensearch import OS_DOMAIN_ARN_RE
 from compose_x_common.aws.rds import RDS_DB_CLUSTER_ARN_RE, RDS_DB_INSTANCE_ARN_RE
+from compose_x_common.aws.route53 import ZONE_ARN_NE
 from compose_x_common.aws.s3 import S3_BUCKET_ARN_RE
 from compose_x_common.aws.secrets_manager import SECRET_ARN_RE
 from compose_x_common.aws.sns import SNS_TOPIC_ARN_RE
@@ -49,6 +50,7 @@ ARNS_PER_CFN_TYPE = {
     "AWS::ServiceDiscovery::HttpNamespace": NAMESPACE_ARN_RE,
     "AWS::KinesisFirehose::DeliveryStream": KINESIS_FIREHOSE_ARN_RE,
     "AWS::ECS::Cluster": CLUSTER_ID_ARN_RE,
+    "AWS::Route53::HostedZone": ZONE_ARN_NE,
 }
 
 ARNS_PER_TAGGINGAPI_TYPE = {

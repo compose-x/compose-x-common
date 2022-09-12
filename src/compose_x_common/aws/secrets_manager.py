@@ -13,7 +13,7 @@ SECRET_ARN_RE = re.compile(
 def get_secret_name_from_arn(secret_arn: str):
     """
     Function to get the secret name from the secret ARN. The ARN contains a `-` with 6 random chars.
-    The secret name needs these removed so we remove the last 7 chars from the secret ARN
+    The secret name needs these removed, so we remove the last 7 chars from the secret ARN
 
     :param str secret_arn:
     :return: The secret name

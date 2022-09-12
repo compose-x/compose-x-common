@@ -3,4 +3,4 @@
 
 import re
 
-S3_BUCKET_ARN_RE = re.compile(r"^arn:aws(?:-[a-z]+)?:s3:::(?P<id>[\S]+)$")
+S3_BUCKET_ARN_RE = re.compile(r"^arn:aws(?:-[a-z]+)?:s3:::(?P<id>[\w\-.]+)$")

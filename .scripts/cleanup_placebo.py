@@ -6,7 +6,7 @@ import re
 from typing import Optional, Sequence
 
 ARN_RE = re.compile(
-    r"^arn:aws(?:-[a-z]+)?:[\w]+:(?:[\S]+)?:(?P<accountid>[0-9]{12}).*$"
+    r"^arn:aws(?:-[a-z]+)?:(?P<service>[\w\-_]+)?:(?P<region>[\w\-_]+)?:(?P<accountid>[0-9]{12})?(?P<resource>.*)$"
 )
 PLACEHOLDER = "REDACTED"
 
