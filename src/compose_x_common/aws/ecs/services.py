@@ -11,7 +11,7 @@ from compose_x_common.aws import get_session
 from compose_x_common.compose_x_common import keyisset
 
 SERVICE_ARN_RE = re.compile(
-    r"arn:(?P<partition>aws([^:]+)?):ecs:(?P<region>[^:]+):"
+    r"arn:(?P<partition>aws(?:[^:]+)?):ecs:(?P<region>[^:]+):"
     r"(?P<account_id>\d{12}):service/(?P<cluster>[^/][\w\-_]+)/(?P<id>[^/]+)"
 )
 
