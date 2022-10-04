@@ -33,6 +33,7 @@ def valid_arns():
         "AWS::ECS::Cluster": "arn:aws:ecs:eu-west-1:123456789010:cluster/default",
         "AWS::KinesisFirehose::DeliveryStream": "arn:aws:firehose:eu-west-1:123456789010:deliverystream/PUT-S3-g6B0t",
         "AWS::Route53::HostedZone": "arn:aws:route53:::hostedzone/Z0511212EJ09VUT1A6P1",
+        "AWS::ECS::Service": "arn:aws:ecs:eu-west-1:123456789010:service/prod/connect-cluster",
     }
 
 

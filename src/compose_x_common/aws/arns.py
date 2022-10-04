@@ -7,6 +7,7 @@ from compose_x_common.aws.codeguru_profiler import PROFILER_ARN_RE
 from compose_x_common.aws.cognito_userpool import USER_POOL_RE
 from compose_x_common.aws.dynamodb import TABLE_ARN_RE
 from compose_x_common.aws.ecs import CLUSTER_ID_ARN_RE
+from compose_x_common.aws.ecs.services import SERVICE_ARN_RE
 from compose_x_common.aws.elasticache import CACHE_CLUSTER_ARN_RE
 from compose_x_common.aws.iam import IAM_ROLE_ARN_RE, IAM_USER_ARN_RE
 from compose_x_common.aws.kinesis import KINESIS_FIREHOSE_ARN_RE, KINESIS_STREAM_ARN_RE
@@ -51,6 +52,7 @@ ARNS_PER_CFN_TYPE = {
     "AWS::KinesisFirehose::DeliveryStream": KINESIS_FIREHOSE_ARN_RE,
     "AWS::ECS::Cluster": CLUSTER_ID_ARN_RE,
     "AWS::Route53::HostedZone": ZONE_ARN_NE,
+    "AWS::ECS::Service": SERVICE_ARN_RE,
 }
 
 ARNS_PER_TAGGINGAPI_TYPE = {
@@ -73,4 +75,5 @@ ARNS_PER_TAGGINGAPI_TYPE = {
     "cognito-idp": USER_POOL_RE,
     "elasticache:cluster": CACHE_CLUSTER_ARN_RE,
     "firehose:deliverystream": KINESIS_FIREHOSE_ARN_RE,
+    "ecs:service": SERVICE_ARN_RE,
 }
