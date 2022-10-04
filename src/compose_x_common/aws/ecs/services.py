@@ -21,6 +21,7 @@ def get_ecs_services_from_tags(
     services_list: list = None,
     next_token: str = None,
     session: Session = None,
+    arns_only: bool = False,
 ) -> list:
     """
     Retrieves the services based on the tags provided.
@@ -48,4 +49,6 @@ def get_ecs_services_from_tags(
         return get_ecs_services_from_tags(
             tags, services_list, services_r["PaginationToken"], session
         )
-    return [item["ResourceARN"] for item in services_list]
+    if arns_only:
+        return [item["ResourceARN"] for item in services_list]
+    return services_list
