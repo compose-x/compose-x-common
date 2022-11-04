@@ -1,0 +1,29 @@
+{
+    "status_code": 200,
+    "data": {
+        "ResponseMetadata": {
+            "RequestId": "498a6cd6-9280-4600-b5a0-57231508f714",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "content-type": "application/json",
+                "content-length": "29",
+                "connection": "keep-alive",
+                "date": "Fri, 04 Nov 2022 12:35:01 GMT",
+                "x-amzn-requestid": "498a6cd6-9280-4600-b5a0-57231508f714",
+                "access-control-allow-origin": "*",
+                "access-control-allow-headers": "Authorization,Date,X-Amz-Date,X-Amz-Security-Token,X-Amz-Target,content-type,x-amz-content-sha256,x-amz-user-agent,x-amzn-platform-id,x-amzn-trace-id",
+                "x-amz-apigw-id": "bE4GcGIFjoEFnWg=",
+                "access-control-allow-methods": "*",
+                "access-control-expose-headers": "x-amzn-errortype,x-amzn-requestid,x-amzn-errormessage,x-amzn-trace-id,x-amz-apigw-id,date",
+                "x-amzn-trace-id": "Root=1-636506f5-0402ae5f483eb7a016182c30",
+                "access-control-max-age": "86400",
+                "x-cache": "Miss from cloudfront",
+                "via": "1.1 22e421a47e59010b5e8eb6ae4d4bd7e4.cloudfront.net (CloudFront)",
+                "x-amz-cf-pop": "LHR61-P2",
+                "x-amz-cf-id": "gRajapMeIRceJXWlWJb9zFeT0IpSuact7pwjk1DVg2Q8rAPnpuhPgA=="
+            },
+            "RetryAttempts": 0
+        },
+        "ClusterInfoList": []
+    }
+}

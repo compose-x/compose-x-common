@@ -1,0 +1,110 @@
+{
+    "status_code": 200,
+    "data": {
+        "ResponseMetadata": {
+            "RequestId": "e8389daa-8ec9-42d0-97bc-a065cd8e092c",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "content-type": "application/json",
+                "content-length": "800",
+                "connection": "keep-alive",
+                "date": "Fri, 04 Nov 2022 12:27:51 GMT",
+                "x-amzn-requestid": "e8389daa-8ec9-42d0-97bc-a065cd8e092c",
+                "access-control-allow-origin": "*",
+                "access-control-allow-headers": "Authorization,Date,X-Amz-Date,X-Amz-Security-Token,X-Amz-Target,content-type,x-amz-content-sha256,x-amz-user-agent,x-amzn-platform-id,x-amzn-trace-id",
+                "x-amz-apigw-id": "bE3DIETPDoEF0dg=",
+                "access-control-allow-methods": "*",
+                "access-control-expose-headers": "x-amzn-errortype,x-amzn-requestid,x-amzn-errormessage,x-amzn-trace-id,x-amz-apigw-id,date",
+                "x-amzn-trace-id": "Root=1-63650547-57bf4a5a46b460f3287e9d5a",
+                "access-control-max-age": "86400",
+                "x-cache": "Miss from cloudfront",
+                "via": "1.1 832cded15fb3de318592b45e0493db8e.cloudfront.net (CloudFront)",
+                "x-amz-cf-pop": "LHR61-P2",
+                "x-amz-cf-id": "NhD8x4Mf9yioxP6s6Vc8EniBLs-6aOrI3IbKnz3vIDyGs4QfXDeQLw=="
+            },
+            "RetryAttempts": 0
+        },
+        "KafkaVersions": [
+            {
+                "Version": "1.1.1",
+                "Status": "DEPRECATED"
+            },
+            {
+                "Version": "2.1.0",
+                "Status": "DEPRECATED"
+            },
+            {
+                "Version": "2.2.1",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "2.3.1",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "2.4.1",
+                "Status": "DEPRECATED"
+            },
+            {
+                "Version": "2.4.1.1",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "2.5.1",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "2.6.0",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "2.6.1",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "2.6.2",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "2.6.3",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "2.7.0",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "2.7.1",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "2.7.2",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "2.8.0",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "2.8.1",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "2.8.2.tiered",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "3.1.1",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "3.2.0",
+                "Status": "ACTIVE"
+            },
+            {
+                "Version": "3.3.1",
+                "Status": "ACTIVE"
+            }
+        ]
+    }
+}

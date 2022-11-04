@@ -1,0 +1,71 @@
+{
+    "status_code": 200,
+    "data": {
+        "ResponseMetadata": {
+            "RequestId": "a6cb5dcf-032d-4b21-980c-85b07d473da6",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "content-type": "application/json",
+                "content-length": "757",
+                "connection": "keep-alive",
+                "date": "Fri, 04 Nov 2022 12:35:02 GMT",
+                "x-amzn-requestid": "a6cb5dcf-032d-4b21-980c-85b07d473da6",
+                "access-control-allow-origin": "*",
+                "access-control-allow-headers": "Authorization,Date,X-Amz-Date,X-Amz-Security-Token,X-Amz-Target,content-type,x-amz-content-sha256,x-amz-user-agent,x-amzn-platform-id,x-amzn-trace-id",
+                "x-amz-apigw-id": "bE4GkG1kjoEF3wg=",
+                "access-control-allow-methods": "*",
+                "access-control-expose-headers": "x-amzn-errortype,x-amzn-requestid,x-amzn-errormessage,x-amzn-trace-id,x-amz-apigw-id,date",
+                "x-amzn-trace-id": "Root=1-636506f6-7b8c40b81db9d3a6773beeff",
+                "access-control-max-age": "86400",
+                "x-cache": "Miss from cloudfront",
+                "via": "1.1 b7a69c767c9474faad515acbe4c0d5f8.cloudfront.net (CloudFront)",
+                "x-amz-cf-pop": "LHR61-P2",
+                "x-amz-cf-id": "VF145WplwZwNmOD1KGe7QHPTX2xdigd-OtBS9QgKPUMKK-iWsEOslw=="
+            },
+            "RetryAttempts": 0
+        },
+        "ClusterInfoList": [
+            {
+                "ClusterType": "SERVERLESS",
+                "ClusterArn": "arn:aws:kafka:eu-west-1:000000000000:cluster/demo-cluster-1/d7e68213-0896-4839-80df-dea01b79750c-s1",
+                "ClusterName": "demo-cluster-1",
+                "CreationTime": {
+                    "__class__": "datetime",
+                    "year": 2022,
+                    "month": 11,
+                    "day": 4,
+                    "hour": 12,
+                    "minute": 31,
+                    "second": 14,
+                    "microsecond": 953000
+                },
+                "CurrentVersion": "K2EUQ1WTGCTBG2",
+                "State": "ACTIVE",
+                "Tags": {
+                    "Name": "demo-cluster-1"
+                },
+                "Serverless": {
+                    "VpcConfigs": [
+                        {
+                            "SubnetIds": [
+                                "subnet-08de98749006ee08b",
+                                "subnet-0d72d741d0d8e0ca7",
+                                "subnet-02ccce037ba06d362"
+                            ],
+                            "SecurityGroupIds": [
+                                "sg-06405b62ddc1aa38c"
+                            ]
+                        }
+                    ],
+                    "ClientAuthentication": {
+                        "Sasl": {
+                            "Iam": {
+                                "Enabled": true
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

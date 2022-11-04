@@ -7,6 +7,11 @@ from copy import deepcopy
 from compose_x_common.aws import get_session
 from compose_x_common.compose_x_common import keyisset, set_else_none
 
+SCHEDULED_ACTION_ARN_RE = (
+    r"arn:aws(?:[a-z\-]+)?:autoscaling:(?P<region>[\w-]+):"
+    r"(?P<accountid>\d{12}):scheduledAction:(?P<id>[\S]+)"
+)
+
 
 def list_all_scalable_targets(
     namespace=None, targets=None, next_token=None, session=None, **kwargs

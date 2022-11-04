@@ -1,0 +1,88 @@
+{
+    "status_code": 200,
+    "data": {
+        "ResponseMetadata": {
+            "RequestId": "52e4d1ac-b381-4e5c-97db-e9fe97a90569",
+            "HTTPStatusCode": 200,
+            "HTTPHeaders": {
+                "content-type": "application/json",
+                "content-length": "620",
+                "connection": "keep-alive",
+                "date": "Fri, 04 Nov 2022 12:27:51 GMT",
+                "x-amzn-requestid": "52e4d1ac-b381-4e5c-97db-e9fe97a90569",
+                "access-control-allow-origin": "*",
+                "access-control-allow-headers": "Authorization,Date,X-Amz-Date,X-Amz-Security-Token,X-Amz-Target,content-type,x-amz-content-sha256,x-amz-user-agent,x-amzn-platform-id,x-amzn-trace-id",
+                "x-amz-apigw-id": "bE3DOExCDoEFdag=",
+                "access-control-allow-methods": "*",
+                "access-control-expose-headers": "x-amzn-errortype,x-amzn-requestid,x-amzn-errormessage,x-amzn-trace-id,x-amz-apigw-id,date",
+                "x-amzn-trace-id": "Root=1-63650547-05ae7acd52a6dadb15f84662",
+                "access-control-max-age": "86400",
+                "x-cache": "Miss from cloudfront",
+                "via": "1.1 08dc6f02f30e8ad9291872e7e3d5b658.cloudfront.net (CloudFront)",
+                "x-amz-cf-pop": "LHR61-P2",
+                "x-amz-cf-id": "adk4_tdtqmSAnl4kMq_On4v0j3n4SD1rLleHUfrvgQQPXg3sJCFEzQ=="
+            },
+            "RetryAttempts": 0
+        },
+        "Configurations": [
+            {
+                "Arn": "arn:aws:kafka:eu-west-1:000000000000:configuration/default-msk-282-tiered/7279bc96-b00f-4f72-9d4d-15f5f8fbde59-8",
+                "CreationTime": {
+                    "__class__": "datetime",
+                    "year": 2022,
+                    "month": 11,
+                    "day": 4,
+                    "hour": 12,
+                    "minute": 14,
+                    "second": 34,
+                    "microsecond": 813000
+                },
+                "KafkaVersions": [],
+                "LatestRevision": {
+                    "CreationTime": {
+                        "__class__": "datetime",
+                        "year": 2022,
+                        "month": 11,
+                        "day": 4,
+                        "hour": 12,
+                        "minute": 14,
+                        "second": 34,
+                        "microsecond": 813000
+                    },
+                    "Revision": 1
+                },
+                "Name": "default-msk-282-tiered",
+                "State": "ACTIVE"
+            },
+            {
+                "Arn": "arn:aws:kafka:eu-west-1:000000000000:configuration/default-msk-331/e44a32b9-4cba-4686-a1e4-b0e72fb1baa4-8",
+                "CreationTime": {
+                    "__class__": "datetime",
+                    "year": 2022,
+                    "month": 11,
+                    "day": 4,
+                    "hour": 12,
+                    "minute": 14,
+                    "second": 14,
+                    "microsecond": 202000
+                },
+                "KafkaVersions": [],
+                "LatestRevision": {
+                    "CreationTime": {
+                        "__class__": "datetime",
+                        "year": 2022,
+                        "month": 11,
+                        "day": 4,
+                        "hour": 12,
+                        "minute": 14,
+                        "second": 14,
+                        "microsecond": 202000
+                    },
+                    "Revision": 1
+                },
+                "Name": "default-msk-331",
+                "State": "ACTIVE"
+            }
+        ]
+    }
+}

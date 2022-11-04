@@ -12,6 +12,7 @@ from compose_x_common.aws.elasticache import CACHE_CLUSTER_ARN_RE
 from compose_x_common.aws.iam import IAM_ROLE_ARN_RE, IAM_USER_ARN_RE
 from compose_x_common.aws.kinesis import KINESIS_FIREHOSE_ARN_RE, KINESIS_STREAM_ARN_RE
 from compose_x_common.aws.kms import KMS_ALIAS_ARN_RE, KMS_KEY_ARN_RE
+from compose_x_common.aws.msk import MSK_CLUSTER_ARN_RE, MSK_CONFIGURATION_ARN_RE
 from compose_x_common.aws.neptune import NEPTUNE_DB_CLUSTER_ARN_RE
 from compose_x_common.aws.opensearch import OS_DOMAIN_ARN_RE
 from compose_x_common.aws.rds import RDS_DB_CLUSTER_ARN_RE, RDS_DB_INSTANCE_ARN_RE
@@ -53,6 +54,9 @@ ARNS_PER_CFN_TYPE = {
     "AWS::ECS::Cluster": CLUSTER_ID_ARN_RE,
     "AWS::Route53::HostedZone": ZONE_ARN_NE,
     "AWS::ECS::Service": SERVICE_ARN_RE,
+    "AWS::MSK::Cluster": MSK_CLUSTER_ARN_RE,
+    "AWS::MSK::Configuration": MSK_CONFIGURATION_ARN_RE,
+    "AWS::MSK::ServerlessCluster": MSK_CLUSTER_ARN_RE,
 }
 
 ARNS_PER_TAGGINGAPI_TYPE = {
@@ -76,4 +80,5 @@ ARNS_PER_TAGGINGAPI_TYPE = {
     "elasticache:cluster": CACHE_CLUSTER_ARN_RE,
     "firehose:deliverystream": KINESIS_FIREHOSE_ARN_RE,
     "ecs:service": SERVICE_ARN_RE,
+    "kafka:cluster": MSK_CLUSTER_ARN_RE,
 }
