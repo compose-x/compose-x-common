@@ -16,12 +16,12 @@ from compose_x_common.aws import get_session
 from compose_x_common.compose_x_common import keyisset
 
 MSK_CLUSTER_ARN_RE = re.compile(
-    r"arn:(?P<partition>[a-z\d\-]+):kafka:(?P<region>[a-z\d\-]+):(?P<account>[\d]{12})"
+    r"arn:(?P<partition>[a-z\d\-]+):kafka:(?P<region>[a-z\d\-]+):(?P<accountid>[\d]{12})"
     r":cluster/(?P<id>(?P<name>[\w\-_]+)/(?P<uuid>[a-z0-9\-]+))$"
 )
 
 MSK_CONFIGURATION_ARN_RE = re.compile(
-    r"arn:(?P<partition>[a-z\d\-]+):kafka:(?P<region>[a-z\d\-]+):(?P<account>[\d]{12})"
+    r"arn:(?P<partition>[a-z\d\-]+):kafka:(?P<region>[a-z\d\-]+):(?P<accountid>[\d]{12})"
     r":configuration/(?P<id>(?P<name>[\w\-_]+)/(?P<uuid>[a-z0-9\-]+))$"
 )
 
