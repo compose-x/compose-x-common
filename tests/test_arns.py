@@ -37,6 +37,7 @@ def valid_arns():
         "AWS::MSK::Cluster": "arn:aws:kafka:us-east-1:123456789012:cluster/CustomerMessages/abcd1234-abcd-dcba-4321-a1b2abcd9f9f-2",
         "AWS::MSK::ServerlessCluster": "arn:aws:kafka:eu-west-1:123456789012:cluster/demo-cluster-1/d7e68213-0896-4839-80df-dea01b79750c-s1",
         "AWS::MSK::Configuration": "arn:aws:kafka:eu-west-1:123456789012:configuration/default-msk-331/e44a32b9-4cba-4686-a1e4-b0e72fb1baa4-8",
+        "AWS::Glue::Registry": "arn:aws:glue:us-east-2:012345678912:registry/registryname-1",
     }
 
 

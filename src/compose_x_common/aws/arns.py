@@ -9,6 +9,7 @@ from compose_x_common.aws.dynamodb import TABLE_ARN_RE
 from compose_x_common.aws.ecs import CLUSTER_ID_ARN_RE
 from compose_x_common.aws.ecs.services import SERVICE_ARN_RE
 from compose_x_common.aws.elasticache import CACHE_CLUSTER_ARN_RE
+from compose_x_common.aws.glue import GLUE_SR_ARN_RE
 from compose_x_common.aws.iam import IAM_ROLE_ARN_RE, IAM_USER_ARN_RE
 from compose_x_common.aws.kinesis import KINESIS_FIREHOSE_ARN_RE, KINESIS_STREAM_ARN_RE
 from compose_x_common.aws.kms import KMS_ALIAS_ARN_RE, KMS_KEY_ARN_RE
@@ -57,6 +58,7 @@ ARNS_PER_CFN_TYPE = {
     "AWS::MSK::Cluster": MSK_CLUSTER_ARN_RE,
     "AWS::MSK::Configuration": MSK_CONFIGURATION_ARN_RE,
     "AWS::MSK::ServerlessCluster": MSK_CLUSTER_ARN_RE,
+    "AWS::Glue::Registry": GLUE_SR_ARN_RE,
 }
 
 ARNS_PER_TAGGINGAPI_TYPE = {
