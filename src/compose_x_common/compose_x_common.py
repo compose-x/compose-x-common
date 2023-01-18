@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import itertools
 import re
+from datetime import timedelta
 from typing import Any, Union
 
 from dateutil.relativedelta import relativedelta
@@ -75,10 +76,7 @@ def set_else_none(
         return alt_value if not keypresent(key, props) else props[key]
 
 
-def get_duration(duration_exp: str) -> relativedelta:
-    """
-    Function to define the time delta
-    """
+def duration_expression_to_values(duration_exp: str) -> tuple:
     parts = DURATIONS_RE.match(duration_exp)
     milliseconds = int(parts.group("ms")) if parts.group("ms") else 0
     seconds = int(parts.group("s")) if parts.group("s") else 0
@@ -87,10 +85,57 @@ def get_duration(duration_exp: str) -> relativedelta:
     days = int(parts.group("d")) if parts.group("d") else 0
     weeks = int(parts.group("w")) if parts.group("w") else 0
     years = int(parts.group("y")) if parts.group("y") else 0
+    return milliseconds, seconds, minutes, hours, days, weeks, years
+
+
+def get_duration_relativedelta(duration_exp: str) -> relativedelta:
+    """
+    Function to define the time delta
+    """
+    (
+        milliseconds,
+        seconds,
+        minutes,
+        hours,
+        days,
+        weeks,
+        years,
+    ) = duration_expression_to_values(duration_exp)
     delta = relativedelta(
         years=years,
         minutes=minutes,
         weeks=weeks,
+        days=days,
+        hours=hours,
+        seconds=seconds,
+        microseconds=(milliseconds * 1000),
+    )
+    return delta
+
+
+def get_duration(duration_exp: str) -> relativedelta:
+    """
+    Function kept for consistency
+    """
+    return get_duration_relativedelta(duration_exp)
+
+
+def get_duration_timedelta(duration_exp: str) -> timedelta:
+    """
+    Function to define the time delta
+    """
+    (
+        milliseconds,
+        seconds,
+        minutes,
+        hours,
+        days,
+        weeks,
+        years,
+    ) = duration_expression_to_values(duration_exp)
+    delta = timedelta(
+        minutes=minutes,
+        weeks=weeks + (52 * years),
         days=days,
         hours=hours,
         seconds=seconds,

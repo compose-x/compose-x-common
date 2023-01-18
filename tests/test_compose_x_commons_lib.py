@@ -11,6 +11,7 @@ from dateutil.relativedelta import relativedelta
 from compose_x_common.compose_x_common import (
     attributes_to_mapping,
     get_duration,
+    get_duration_timedelta,
     get_future_time_delta,
     get_past_time_delta,
     keyisset,
@@ -55,6 +56,12 @@ def test_time_delta():
     delta_test = relativedelta(minutes=10)
     assert get_future_time_delta(now, delta) == get_future_time_delta(now, delta_test)
     assert get_past_time_delta(now, delta) == get_past_time_delta(now, delta_test)
+
+
+def test_get_time_delta():
+    assert int(get_duration_timedelta("15m20s").total_seconds()) == 920
+    assert get_duration_timedelta("4w") == get_duration_timedelta("28d")
+    assert get_duration_timedelta("1y1d1h") == get_duration_timedelta("52w1d1h")
 
 
 def test_attribute_to_mapping():
