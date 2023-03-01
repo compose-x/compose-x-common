@@ -9,10 +9,11 @@ try:
 except ImportError:
     UNSAFE = True
 
-
-sys.path.insert(0, os.path.abspath(".."))
-
-import compose_x_common
+try:
+    import compose_x_common
+except ImportError:
+    sys.path.insert(0, os.path.abspath(".."))
+    sys.path.insert(0, os.path.abspath("../src"))
 
 extensions = ["sphinx.ext.autodoc", "sphinx.ext.viewcode"]
 templates_path = ["_templates"]
