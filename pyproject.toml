@@ -15,20 +15,20 @@ include = [
     "LICENSE",
     "MANIFEST.in"
 ]
-classifiers=[
+classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10"
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
 ]
 readme = "README.rst"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 boto3 = "^1.22"
 flatdict = "^4.0.1"
 python-dateutil = "^2.8.2"
@@ -39,12 +39,12 @@ placebo = ">=0.9.0,<1.0"
 pytest = "^7.2"
 Sphinx = "^5.0"
 sphinx-material = "^0.0.35"
-isort = "^5.10.1"
-black = "^22.3.0"
-pre-commit = "^2.19.0"
+isort = "^5.12"
+black = "^23.1"
+pre-commit = "^3.1"
 flake8-docstrings = "^1.6.0"
 coverage = "^7.0"
-tbump = "^6.8.0"
+tbump = "^6.9.0"
 pyupgrade = "^3.3"
 sphinx-rtd-theme = "^1.0.0"
 
@@ -99,6 +99,6 @@ source = ["src"]
 show_missing = true
 
 [tool.flake8]
-exclude =[ ".git","__pycache__","docs/source/conf.py","old","build","dist","feature"]
+exclude = [".git", "__pycache__", "docs/source/conf.py", "old", "build", "dist", "feature"]
 max-line-length = 88
 max-complexity = 10
