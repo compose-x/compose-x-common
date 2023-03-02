@@ -6,15 +6,20 @@ Compose-X -- Common
 .. image:: https://img.shields.io/pypi/v/compose_x_common.svg
         :target: https://pypi.python.org/pypi/compose_x_common
 
-.. image:: https://readthedocs.org/projects/compose-x-commons-lib/badge/?version=latest
-        :target: https://compose-x-commons-lib.readthedocs.io/en/latest/?version=latest
-        :alt: Documentation Status
 
+--------------------------------------------------------------------------------------
+Standalone library of reusable functions to ease repetitive tasks & AWS functions
+--------------------------------------------------------------------------------------
 
+Used in a majority of the `Compose-X`_ projects
 
+Features
+==========
 
-Standalone library of reusable functions"
+* Different helpers ``compose_x_commom.compose_x_common``
+* Python ARN Regular expressions for different resources ``compose_x_commom.aws.arns``
+* AWS Helpers ``compose_x_commom.aws``
 
 
 * Free software: MPL-2.0
-* Documentation: https://compose-x-common.readthedocs.io.
+.. _Compose-X: https://github.com/compose-x
