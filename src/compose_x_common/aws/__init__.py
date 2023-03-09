@@ -65,7 +65,7 @@ def get_assume_role_session(
     :rtype: boto3.session.Session
     """
     args = deepcopy(kwargs)
-    if not session_name or "RoleSessionName" not in kwargs.keys():
+    if not session_name or "RoleSessionName" not in kwargs:
         args["RoleSessionName"] = "stsAssumeRole"
     args["RoleArn"] = arn
     args["DurationSeconds"] = set_else_none("DurationSeconds", kwargs, alt_value=900)
