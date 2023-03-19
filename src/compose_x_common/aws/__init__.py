@@ -52,17 +52,16 @@ def validate_iam_role_arn(arn: str, as_str: bool = False) -> Union[str, re.Match
 
 
 def get_assume_role_session(
-    session: Session, arn: str, session_name: str = None, region: str = None, **kwargs
-) -> Session:
+    session: Session,
+    arn: str,
+    session_name: str = None,
+    region: str = None,
+    include_full_return: bool = False,
+    **kwargs,
+) -> Union[Session, (Session, dict)]:
     """
-    Function to override ComposeXSettings session to specific session for Lookup
-
-    :param boto3.session.Session session: The original session fetching the credentials for X-Role
-    :param str arn: the IAM Role ARN to assume role with
-    :param str session_name: Override name of the session
-    :param region: AWS Region for API Calls
-    :return: boto3 session from lookup settings
-    :rtype: boto3.session.Session
+    Function to get a boto3.session.Session() based on assume another IAM role. Can return just the session
+    or the session and the full credentials return
     """
     args = deepcopy(kwargs)
     if not session_name or "RoleSessionName" not in kwargs.keys():
@@ -71,13 +70,15 @@ def get_assume_role_session(
     args["DurationSeconds"] = set_else_none("DurationSeconds", kwargs, alt_value=900)
     validate_iam_role_arn(arn)
     creds = session.client("sts").assume_role(**args)
-
-    return Session(
+    session = Session(
         region_name=region,
         aws_access_key_id=creds["Credentials"]["AccessKeyId"],
         aws_session_token=creds["Credentials"]["SessionToken"],
         aws_secret_access_key=creds["Credentials"]["SecretAccessKey"],
     )
+    if include_full_return:
+        return session, creds
+    return session
 
 
 def get_resource_from_ccapi(
