@@ -2,6 +2,7 @@
 # Copyright 2020-2022 John Mille <john@compose-x.io>
 
 from compose_x_common.aws.acm import ACM_ARN_RE
+from compose_x_common.aws.aps import APS_WORKSPACE_ARN_RE
 from compose_x_common.aws.cloudmap import NAMESPACE_ARN_RE
 from compose_x_common.aws.codeguru_profiler import PROFILER_ARN_RE
 from compose_x_common.aws.cognito_userpool import USER_POOL_RE
@@ -59,6 +60,7 @@ ARNS_PER_CFN_TYPE = {
     "AWS::MSK::Configuration": MSK_CONFIGURATION_ARN_RE,
     "AWS::MSK::ServerlessCluster": MSK_CLUSTER_ARN_RE,
     "AWS::Glue::Registry": GLUE_SR_ARN_RE,
+    "AWS::APS::Workspace": APS_WORKSPACE_ARN_RE,
 }
 
 ARNS_PER_TAGGINGAPI_TYPE = {
@@ -83,4 +85,5 @@ ARNS_PER_TAGGINGAPI_TYPE = {
     "firehose:deliverystream": KINESIS_FIREHOSE_ARN_RE,
     "ecs:service": SERVICE_ARN_RE,
     "kafka:cluster": MSK_CLUSTER_ARN_RE,
+    "aps:workspace": APS_WORKSPACE_ARN_RE,
 }
