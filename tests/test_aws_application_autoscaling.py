@@ -13,7 +13,6 @@ HERE = path.abspath(path.dirname(__file__))
 
 
 def test_list_scalable_targets():
-
     test_session = Session()
     pill = placebo.attach(test_session, data_path=f"{HERE}/placebos/appas/")
     # pill.record()

@@ -40,7 +40,6 @@ def test_get_subnets():
 
 
 def test_find_from_tags():
-
     test_session = Session()
     pill = placebo.attach(test_session, data_path=f"{HERE}/placebos/vpc/")
     # pill.record()
