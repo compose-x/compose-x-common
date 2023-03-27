@@ -26,7 +26,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "Compose-X Commons Lib"
-copyright = f"2021-2022, @{compose_x_common.__author__}"
+copyright = f"2020-2023, @{compose_x_common.__author__}"
 author = compose_x_common.__author__
 
 version = compose_x_common.__version__
