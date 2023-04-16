@@ -25,6 +25,7 @@ from compose_x_common.aws.sns import SNS_TOPIC_ARN_RE
 from compose_x_common.aws.sqs import SQS_QUEUE_ARN_RE
 from compose_x_common.aws.ssm_parameter import SSM_PARAMETER_ARN_RE
 from compose_x_common.aws.vpc import SUBNET_ARN_RE, VPC_ARN_RE
+from compose_x_common.aws.wafv2 import WAF_V2_WEB_ACL_ARN_RE
 
 ARNS_PER_CFN_TYPE = {
     "AWS::IAM::Role": IAM_ROLE_ARN_RE,
@@ -61,6 +62,7 @@ ARNS_PER_CFN_TYPE = {
     "AWS::MSK::ServerlessCluster": MSK_CLUSTER_ARN_RE,
     "AWS::Glue::Registry": GLUE_SR_ARN_RE,
     "AWS::APS::Workspace": APS_WORKSPACE_ARN_RE,
+    "AWS::WAFv2::WebACL": WAF_V2_WEB_ACL_ARN_RE,
 }
 
 ARNS_PER_TAGGINGAPI_TYPE = {

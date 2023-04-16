@@ -38,6 +38,7 @@ def valid_arns():
         "AWS::MSK::ServerlessCluster": "arn:aws:kafka:eu-west-1:123456789012:cluster/demo-cluster-1/d7e68213-0896-4839-80df-dea01b79750c-s1",
         "AWS::MSK::Configuration": "arn:aws:kafka:eu-west-1:123456789012:configuration/default-msk-331/e44a32b9-4cba-4686-a1e4-b0e72fb1baa4-8",
         "AWS::Glue::Registry": "arn:aws:glue:us-east-2:012345678912:registry/registryname-1",
+        "AWS::WAFv2::WebACL": "arn:aws:wafv2:eu-west-1:012345678912:regional/webacl/wafv2-webacl-dev/732c1718-ea9f-4370-a2a9-607f948a3cd7",
     }
 
 
