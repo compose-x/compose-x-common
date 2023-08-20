@@ -45,7 +45,7 @@ pre-commit = "^3.1"
 flake8-docstrings = "^1.6.0"
 coverage = "^7.0"
 tbump = "^6.9.0"
-pyupgrade = "^3.3"
+pyupgrade = "^3.8"
 sphinx-rtd-theme = "^1.0.0"
 
 [tool.tbump]
