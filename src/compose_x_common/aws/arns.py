@@ -9,6 +9,7 @@ from compose_x_common.aws.cognito_userpool import USER_POOL_RE
 from compose_x_common.aws.dynamodb import TABLE_ARN_RE
 from compose_x_common.aws.ecs import CLUSTER_ID_ARN_RE
 from compose_x_common.aws.ecs.services import SERVICE_ARN_RE
+from compose_x_common.aws.efs import EFS_ARN_RE
 from compose_x_common.aws.elasticache import CACHE_CLUSTER_ARN_RE
 from compose_x_common.aws.glue import GLUE_SR_ARN_RE
 from compose_x_common.aws.iam import IAM_ROLE_ARN_RE, IAM_USER_ARN_RE
@@ -63,6 +64,7 @@ ARNS_PER_CFN_TYPE = {
     "AWS::Glue::Registry": GLUE_SR_ARN_RE,
     "AWS::APS::Workspace": APS_WORKSPACE_ARN_RE,
     "AWS::WAFv2::WebACL": WAF_V2_WEB_ACL_ARN_RE,
+    "AWS::EFS::FileSystem": EFS_ARN_RE,
 }
 
 ARNS_PER_TAGGINGAPI_TYPE = {
@@ -88,4 +90,5 @@ ARNS_PER_TAGGINGAPI_TYPE = {
     "ecs:service": SERVICE_ARN_RE,
     "kafka:cluster": MSK_CLUSTER_ARN_RE,
     "aps:workspace": APS_WORKSPACE_ARN_RE,
+    "elasticfilesystem": EFS_ARN_RE,
 }
