@@ -40,6 +40,10 @@ def valid_arns():
         "AWS::Glue::Registry": "arn:aws:glue:us-east-2:012345678912:registry/registryname-1",
         "AWS::WAFv2::WebACL": "arn:aws:wafv2:eu-west-1:012345678912:regional/webacl/wafv2-webacl-dev/732c1718-ea9f-4370-a2a9-607f948a3cd7",
         "AWS::EFS::FileSystem": "arn:aws:elasticfilesystem:eu-west-1:108833517019:file-system/fs-08a8676339b99dc0a",
+        "AWS::ElasticLoadBalancingV2::LoadBalancer": "arn:aws:elasticloadbalancing:eu-west-1:012345678912:loadbalancer/app/dummy/30005cdd5fd8886d",
+        "AWS::ElasticLoadBalancingV2::ListenerRule": "arn:aws:elasticloadbalancing:eu-west-1:012345678912:listener-rule/app/dummy/30005cdd5fd8886d/8a449b15a6b1fcfb/28c19045fad0a1c4",
+        "AWS::ElasticLoadBalancingV2::Listener": "arn:aws:elasticloadbalancing:eu-west-1:012345678912:listener/app/dummy/30005cdd5fd8886d/8a449b15a6b1fcfb",
+        "AWS::ElasticLoadBalancingV2::TargetGroup": "arn:aws:elasticloadbalancing:eu-west-1:012345678912:targetgroup/dummy/8bd3dc4e967a9b9b",
     }
 
 

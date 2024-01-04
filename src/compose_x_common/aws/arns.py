@@ -11,6 +11,12 @@ from compose_x_common.aws.ecs import CLUSTER_ID_ARN_RE
 from compose_x_common.aws.ecs.services import SERVICE_ARN_RE
 from compose_x_common.aws.efs import EFS_ARN_RE
 from compose_x_common.aws.elasticache import CACHE_CLUSTER_ARN_RE
+from compose_x_common.aws.elasticloadbalancing import (
+    LB_V2_LB_ARN_RE,
+    LB_V2_LISTENER_ARN_RE,
+    LB_V2_LISTENER_RULE_ARN_RE,
+    LB_V2_TGT_GROUP_ARN_RE,
+)
 from compose_x_common.aws.glue import GLUE_SR_ARN_RE
 from compose_x_common.aws.iam import IAM_ROLE_ARN_RE, IAM_USER_ARN_RE
 from compose_x_common.aws.kinesis import KINESIS_FIREHOSE_ARN_RE, KINESIS_STREAM_ARN_RE
@@ -65,6 +71,10 @@ ARNS_PER_CFN_TYPE = {
     "AWS::APS::Workspace": APS_WORKSPACE_ARN_RE,
     "AWS::WAFv2::WebACL": WAF_V2_WEB_ACL_ARN_RE,
     "AWS::EFS::FileSystem": EFS_ARN_RE,
+    "AWS::ElasticLoadBalancingV2::LoadBalancer": LB_V2_LB_ARN_RE,
+    "AWS::ElasticLoadBalancingV2::ListenerRule": LB_V2_LISTENER_RULE_ARN_RE,
+    "AWS::ElasticLoadBalancingV2::Listener": LB_V2_LISTENER_ARN_RE,
+    "AWS::ElasticLoadBalancingV2::TargetGroup": LB_V2_TGT_GROUP_ARN_RE,
 }
 
 ARNS_PER_TAGGINGAPI_TYPE = {
@@ -91,4 +101,8 @@ ARNS_PER_TAGGINGAPI_TYPE = {
     "kafka:cluster": MSK_CLUSTER_ARN_RE,
     "aps:workspace": APS_WORKSPACE_ARN_RE,
     "elasticfilesystem": EFS_ARN_RE,
+    "elasticloadbalancing:loadbalancer": LB_V2_LB_ARN_RE,
+    "elasticloadbalancing:listener": LB_V2_LISTENER_ARN_RE,
+    "elasticloadbalancing:listener-rule": LB_V2_LISTENER_RULE_ARN_RE,
+    "elasticloadbalancing:targetgroup": LB_V2_TGT_GROUP_ARN_RE,
 }
