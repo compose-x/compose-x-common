@@ -2,7 +2,6 @@
 Pytest path config
 """
 
-
 import os
 import sys
 

@@ -106,9 +106,9 @@ def describe_all_ecs_clusters_from_ccapi(
         cluster_properties = json.loads(cluster_r["ResourceDescription"]["Properties"])
         if return_as_map:
             if use_cluster_name:
-                clusters[
-                    CLUSTER_NAME_FROM_ARN.match(cluster_arn).group("name")
-                ] = cluster_properties
+                clusters[CLUSTER_NAME_FROM_ARN.match(cluster_arn).group("name")] = (
+                    cluster_properties
+                )
             else:
                 clusters[cluster_arn] = cluster_properties
         else:
