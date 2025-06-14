@@ -23,7 +23,9 @@ classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11"
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13"
 ]
 readme = "README.rst"
 
@@ -34,7 +36,7 @@ flatdict = "^4.0.1"
 python-dateutil = "^2.8.2"
 
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 placebo = ">=0.9.0,<1.0"
 pytest = "^7.2"
 Sphinx = "^5.0"
