@@ -20,19 +20,18 @@ classifiers = [
     "Intended Audience :: Developers",
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13"
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14"
 ]
 readme = "README.rst"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 boto3 = ">=1.26,<2.0"
-flatdict = "^4.0.1"
+flatdict3 = "^0.1.0"
 python-dateutil = "^2.8.2"
 
 
